@@ -1,4 +1,4 @@
-import About from './Components/About';
+// import About from './Components/About';
 import Contact from './Components/Contact';
 import Home from './Components/Home';
 import Navbar from './Components/Navbar';
@@ -9,7 +9,7 @@ function App() {
     <div>
       <Navbar />
       <Home />
-      <About />
+      {/* <About /> */}
       <Skills />
       <Work />
       <Contact />
