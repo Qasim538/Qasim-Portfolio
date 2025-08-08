@@ -7,6 +7,11 @@ import node from '../Assets/node.png'
 import react from '../Assets/react.png'
 import tailwind from '../Assets/tailwind.png'
 import bootstrap from '../Assets/Bootstrap_logo.svg.png'
+import Indesign from '../Assets/Indesign.png'
+import Photoshop from '../Assets/Photoshop.png'
+import Figma from '../Assets/Figma.png'
+import Sketch from '../Assets/Sketch.svg'
+
 
 const Skills = () => {
   return (
@@ -54,6 +59,22 @@ const Skills = () => {
                 <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
                     <img className='w-20 mx-auto' src={bootstrap} alt='bootstrap icon'/>
                     <p className='my-4'>Bootstrap</p>
+                </div>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                    <img className='h-20 mx-auto' src={Figma} alt='bootstrap icon'/>
+                    <p className='my-4'>Figma</p>
+                </div>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                    <img className='w-20 mx-auto' src={Sketch} alt='bootstrap icon'/>
+                    <p className='my-4'>Sketch</p>
+                </div>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                    <img className='w-20 mx-auto' src={Photoshop} alt='bootstrap icon'/>
+                    <p className='my-4'>Photoshop</p>
+                </div>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                    <img className='w-20 mx-auto' src={Indesign} alt='bootstrap icon'/>
+                    <p className='my-4'>Indesign</p>
                 </div>
 
                 <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
