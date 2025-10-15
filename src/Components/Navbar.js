@@ -4,6 +4,7 @@ import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { Link } from "react-scroll";
 
+
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
@@ -11,9 +12,12 @@ const Navbar = () => {
   const openPDF = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    const pdfUrl = `${window.location.origin}/Qasim-Portfolio.pdf`;
+  
+    // ✅ Works both locally and on GitHub Pages
+    const pdfUrl = `${process.env.PUBLIC_URL}/Qasim_Portfolio.pdf`;
     window.open(pdfUrl, "_blank", "noopener,noreferrer");
   };
+  
 
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 md:px-20 bg-[#071325] text-gray-300 z-50">
@@ -110,7 +114,7 @@ const Navbar = () => {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600">
             <a
               className="flex justify-between items-center w-full text-gray-300"
-              href="https://www.linkedin.com/in/qasim-%E2%80%8Emuhammad-16b24011b/"
+              href="https://www.linkedin.com/in/qasim835"
               target="_blank"
               rel="noreferrer"
             >
