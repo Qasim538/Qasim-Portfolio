@@ -4,7 +4,6 @@ import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { Link } from "react-scroll";
 
-
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
@@ -12,12 +11,11 @@ const Navbar = () => {
   const openPDF = (e) => {
     e.preventDefault();
     e.stopPropagation();
-  
+
     // ✅ Works both locally and on GitHub Pages
     const pdfUrl = `${process.env.PUBLIC_URL}/Qasim_Portfolio.pdf`;
     window.open(pdfUrl, "_blank", "noopener,noreferrer");
   };
-  
 
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 md:px-20 bg-[#071325] text-gray-300 z-50">
@@ -27,32 +25,32 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Menu */}
-      <ul className="hidden md:flex gap-8 text-lg">
-        <li>
+      <ul className="hidden md:flex gap-8 text-lg items-center">
+        <li className="flex items-center">
           <Link className="hover:text-red-500" to="home" smooth offset={50} duration={500}>
             Home
           </Link>
         </li>
-        <li>
+        <li className="flex items-center">
           <Link className="hover:text-red-500" to="skills" smooth offset={50} duration={500}>
             Skills
           </Link>
         </li>
-        <li>
+        <li className="flex items-center">
           <Link className="hover:text-red-500" to="work" smooth offset={50} duration={500}>
             Work
           </Link>
         </li>
-        <li>
+        <li className="flex items-center">
           <Link className="hover:text-red-500" to="contact" smooth offset={50} duration={500}>
             Contact
           </Link>
         </li>
-        <li>
+        <li className="flex items-center">
           <button
             type="button"
             onClick={openPDF}
-            className="hover:text-white cursor-pointer bg-red-700 py-2 px-4 rounded"
+            className="hover:text-white cursor-pointer bg-red-700 px-4 py-1.5 rounded text-sm"
           >
             CV & Print Portfolio
           </button>
