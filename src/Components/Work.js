@@ -27,8 +27,8 @@ const Work = () => {
 
           {[
             { img: proj7, title: 'Afreximbank', desc: 'I update pages when needed and enhance user interactivity.', link: 'https://www.afreximbank.com/' },
-            { img: proj8, title: 'Afreximbank', desc: 'Responsible for updates, new pages, and layout improvements.', link: 'https://www.afreximbank.com/' },
-            { img: proj9, title: 'Vauxhall Marketing Email', desc: '', link: 'https://www.vauxhall.co.uk/' },
+            { img: proj8, title: 'Afreximbank', desc: 'Designed email template.', link: 'https://www.afreximbank.com/' },
+            { img: proj9, title: 'Vauxhall Marketing Email', desc: 'Direct marketing email design at McCann MK.', link: 'https://www.vauxhall.co.uk/' },
             { img: proj1, title: 'React JS Application', desc: '', link: 'https://harmonious-fox-7491f1.netlify.app/' },
             { img: proj2, title: 'HTML, CSS, JavaScript, API', desc: '', link: 'https://milla56.github.io/Click-Studio/index.html' },
             { img: proj3, title: 'Weather App (API)', desc: '', link: 'https://qasim538.github.io/Check-Your-City-Weather/' },

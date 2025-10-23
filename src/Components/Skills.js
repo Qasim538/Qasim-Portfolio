@@ -11,6 +11,8 @@ import Indesign from '../Assets/Indesign.png'
 import Photoshop from '../Assets/Photoshop.png'
 import Figma from '../Assets/Figma.png'
 import Sketch from '../Assets/Sketch.svg'
+import Framer from '../Assets/framer.svg'
+import Illustrator from '../Assets/Illustrator.png'
 
 
 const Skills = () => {
@@ -65,6 +67,10 @@ const Skills = () => {
                     <p className='my-4'>Figma</p>
                 </div>
                 <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                    <img className='h-20 mx-auto color-white' src={Framer} alt='bootstrap icon'/>
+                    <p className='my-4'>Framer</p>
+                </div>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
                     <img className='w-20 mx-auto' src={Sketch} alt='bootstrap icon'/>
                     <p className='my-4'>Sketch</p>
                 </div>
@@ -75,6 +81,10 @@ const Skills = () => {
                 <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
                     <img className='w-20 mx-auto' src={Indesign} alt='bootstrap icon'/>
                     <p className='my-4'>Indesign</p>
+                </div>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                    <img className='w-20 mx-auto' src={Illustrator} alt='bootstrap icon'/>
+                    <p className='my-4'>Illustrator</p>
                 </div>
 
                 <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
