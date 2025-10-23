@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Qasim-Portfolio/static/css/main.6cf69ffc.css",
-    "main.js": "/Qasim-Portfolio/static/js/main.3de5b872.js",
+    "main.css": "/Qasim-Portfolio/static/css/main.2a475bc0.css",
+    "main.js": "/Qasim-Portfolio/static/js/main.cf1402f3.js",
     "static/media/Proj6.png": "/Qasim-Portfolio/static/media/Proj6.ad1d0c5731fe77c6f8e1.png",
     "static/media/Proj2.png": "/Qasim-Portfolio/static/media/Proj2.81e099c324b9d004022d.png",
     "static/media/Proj1.png": "/Qasim-Portfolio/static/media/Proj1.fe8484cd8b8ed561220d.png",
@@ -12,6 +12,7 @@
     "static/media/Proj8.jpg": "/Qasim-Portfolio/static/media/Proj8.0be96b0e3190fece2d04.jpg",
     "static/media/Proj4.png": "/Qasim-Portfolio/static/media/Proj4.77c0a78635fd1676eaa4.png",
     "static/media/Figma.png": "/Qasim-Portfolio/static/media/Figma.fd3542507786a9422092.png",
+    "static/media/Illustrator.png": "/Qasim-Portfolio/static/media/Illustrator.cc77895294e2f7e568a1.png",
     "static/media/Proj5.png": "/Qasim-Portfolio/static/media/Proj5.399fd7d8d2f2bf956293.png",
     "static/media/react.png": "/Qasim-Portfolio/static/media/react.0cf951a69d8e58f83f9d.png",
     "static/media/Q-Logo.png": "/Qasim-Portfolio/static/media/Q-Logo.b43a1f6824bb5be8e778.png",
@@ -25,11 +26,12 @@
     "static/media/javascript.png": "/Qasim-Portfolio/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "static/media/Sketch.svg": "/Qasim-Portfolio/static/media/Sketch.99f9ecb07dc0334ba2b7559c56753e82.svg",
     "index.html": "/Qasim-Portfolio/index.html",
-    "main.6cf69ffc.css.map": "/Qasim-Portfolio/static/css/main.6cf69ffc.css.map",
-    "main.3de5b872.js.map": "/Qasim-Portfolio/static/js/main.3de5b872.js.map"
+    "static/media/framer.svg": "/Qasim-Portfolio/static/media/framer.2f5dde4c72522a7ecc397435026b7833.svg",
+    "main.2a475bc0.css.map": "/Qasim-Portfolio/static/css/main.2a475bc0.css.map",
+    "main.cf1402f3.js.map": "/Qasim-Portfolio/static/js/main.cf1402f3.js.map"
   },
   "entrypoints": [
-    "static/css/main.6cf69ffc.css",
-    "static/js/main.3de5b872.js"
+    "static/css/main.2a475bc0.css",
+    "static/js/main.cf1402f3.js"
   ]
 }
