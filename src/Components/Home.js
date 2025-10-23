@@ -16,7 +16,7 @@ const Home = () => {
           Web Developer | Digital Designer | Senior Creative Artworker
         </small>
 
-        <p className="text-[#8892b0] py-4 max-w-[700px]">
+        <p className="text-[#8892b0] py-4 max-w-[900px]">
           I’m a Frontend Developer and UI/UX Designer with over 15 years of
           experience in the creative and design industry. Having worked as a
           creative artworker and designer for more than a decade, I’ve developed
