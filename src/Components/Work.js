@@ -8,6 +8,7 @@ import proj6 from '../Assets/projects/Proj6.png'
 import proj7 from '../Assets/projects/Proj7.jpg'
 import proj8 from '../Assets/projects/Proj8.jpg'
 import proj9 from '../Assets/projects/Proj9.jpg'
+import proj10 from '../Assets/projects/Proj10.png'
 
 const Work = () => {
   return (
@@ -27,6 +28,7 @@ const Work = () => {
 
           {[
             { img: proj7, title: 'Afreximbank', desc: 'I update pages when needed and enhance user interactivity.', link: 'https://www.afreximbank.com/' },
+            { img: proj10, title: 'Afreximbank', desc: 'Farewell Event Egypt.', link: 'https://presidential.afreximbankevents.com/en-home/' },
             { img: proj8, title: 'Afreximbank', desc: 'Designed email template.', link: 'https://www.afreximbank.com/' },
             { img: proj9, title: 'Vauxhall Marketing Email', desc: 'Direct marketing email design at McCann MK.', link: 'https://www.vauxhall.co.uk/' },
             { img: proj1, title: 'React JS Application', desc: '', link: 'https://harmonious-fox-7491f1.netlify.app/' },
