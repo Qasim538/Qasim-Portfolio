@@ -1,7 +1,6 @@
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-scroll";
 import { FaCode, FaPenFancy, FaPrint } from "react-icons/fa";
-import Skills from "./Skills";
 
 const Home = () => {
   return (
@@ -92,7 +91,6 @@ const Home = () => {
         </div>
       </div>
 
-      <Skills />
     </div>
   );
 };
