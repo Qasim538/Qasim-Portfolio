@@ -21,10 +21,10 @@ const Home = () => {
 
         <p className="text-[#8892b0] py-4 max-w-[900px]">
           I’m a <strong>Frontend Developer</strong> and{" "}
-          <strong>UI/UX Designer</strong> with over 15 years of experience in
-          the creative and design industry. Having worked as a{" "}
-          <strong>creative artworker</strong> and designer for more than a
-          decade, I’ve developed a sharp eye for detail,{" "}
+          <strong>UI/UX Designer</strong>
+          with over 17 years of experience in the creative and design industry.
+          Having worked as a <strong>creative artworker</strong> and designer
+          for more than a decade, I’ve developed a sharp eye for detail,{" "}
           <strong>user-centered design</strong>, and effective visual
           storytelling. My background includes extensive experience in{" "}
           <strong>creative artworking</strong> and{" "}
@@ -33,14 +33,17 @@ const Home = () => {
           projects.
           <br />
           <br />
-          My passion for modern technology led me to earn a{" "}
-          <strong>Diploma in Frontend Web Development</strong> from the <strong>
-          University of Birmingham</strong>, where I honed my skills in
-          <strong> HTML</strong>, <strong>CSS</strong>,{" "}
-          <strong>JavaScript</strong>, <strong>React</strong>, and other modern
-          technologies. I now bring together <strong>design thinking</strong>{" "}
-          and <strong>technical expertise</strong> to craft engaging,
-          accessible, and visually compelling digital experiences.
+          I’m <span className="text-red-500" >Arabic</span> literate , and my reading and writing skills enable me to work confidently in both English and Arabic. Having lived and worked in <strong>Saudi Arabia</strong>, I bring valuable cultural awareness and understanding of the Middle Eastern market to my projects.
+
+          <br />
+          <br />
+          My passion for modern technology led me to earn a
+          <strong> Diploma in Frontend Web Development</strong> from the
+          <strong> University of Birmingham</strong>, where I honed my skills in
+          <strong> HTML</strong>, <strong>CSS</strong>,
+          <strong>JavaScript</strong>,<strong> React</strong>, and other modern
+          technologies. I now bring together design thinking and technical expertise to craft engaging, accessible,
+          and visually compelling digital experiences.
         </p>
 
         {/* --- SKILL AREAS --- */}
@@ -87,9 +90,8 @@ const Home = () => {
               </h3>
             </div>
             <p className="text-sm text-[#ccd6f6]">
-              Over a decade of experience creating high-quality print and
-              digital assets, including brochures, campaigns, and brand
-              materials for both online and offline platforms.
+              Over a decade of experience producing high-quality print and digital assets, including annual reports, POS materials, OOH and digital OOH campaigns, as well as brochures and brand collateral for both online and offline platforms.
+
             </p>
           </div>
         </div>

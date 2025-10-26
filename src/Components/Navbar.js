@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <>
       {/* NAVBAR */}
-      <div className="fixed w-full h-[80px] flex justify-between items-center px-8 md:px-20 bg-[#071325] text-gray-300 z-50">
+      <div className="fixed w-full h-[80px] flex justify-between items-center px-5 md:px-20 bg-[#071325] text-gray-300 z-50">
         {/* Logo */}
         <div>
           <img src={logo} alt="Logo" style={{ width: "50px" }} />
@@ -27,22 +27,46 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 text-lg items-center">
           <li>
-            <Link className="hover:text-red-500" to="home" smooth offset={50} duration={500}>
+            <Link
+              className="hover:text-red-500"
+              to="home"
+              smooth
+              offset={50}
+              duration={500}
+            >
               Home
             </Link>
           </li>
           <li>
-            <Link className="hover:text-red-500" to="skills" smooth offset={50} duration={500}>
+            <Link
+              className="hover:text-red-500"
+              to="skills"
+              smooth
+              offset={50}
+              duration={500}
+            >
               Skills
             </Link>
           </li>
           <li>
-            <Link className="hover:text-red-500" to="work" smooth offset={50} duration={500}>
+            <Link
+              className="hover:text-red-500"
+              to="work"
+              smooth
+              offset={50}
+              duration={500}
+            >
               Work
             </Link>
           </li>
           <li>
-            <Link className="hover:text-red-500" to="contact" smooth offset={50} duration={500}>
+            <Link
+              className="hover:text-red-500"
+              to="contact"
+              smooth
+              offset={50}
+              duration={500}
+            >
               Contact
             </Link>
           </li>
@@ -57,9 +81,38 @@ const Navbar = () => {
           </li>
         </ul>
 
-        {/* Hamburger Icon */}
-        <div onClick={handleClick} className="md:hidden z-50 cursor-pointer">
-          {!nav ? <FaBars size={24} /> : <FaTimes size={24} />}
+        {/* --- MOBILE RIGHT SIDE: Socials + Hamburger --- */}
+        <div className="flex items-center gap-4 md:hidden">
+          {/* Social Icons (Mobile) */}
+          <div className="flex gap-3">
+            <a
+              href="https://www.linkedin.com/in/qasim835"
+              target="_blank"
+              rel="noreferrer"
+              className="text-blue-500 hover:text-blue-400 transition"
+            >
+              <FaLinkedin size={22} />
+            </a>
+            <a
+              href="https://github.com/Qasim538"
+              target="_blank"
+              rel="noreferrer"
+              className="text-gray-300 hover:text-gray-100 transition"
+            >
+              <FaGithub size={22} />
+            </a>
+            <a
+              href="mailto:mq12113@gmail.com"
+              className="text-[#6fc2b0] hover:text-teal-300 transition"
+            >
+              <HiOutlineMail size={22} />
+            </a>
+          </div>
+
+          {/* Hamburger Icon */}
+          <div onClick={handleClick} className="z-50 cursor-pointer">
+            {!nav ? <FaBars size={24} /> : <FaTimes size={24} />}
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -94,7 +147,7 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {/* Social Icons (Desktop only) */}
+        {/* Social Icons (Desktop only - sidebar) */}
         <div className="hidden lg:flex fixed flex-col top-[35%] left-0 z-[60]">
           <ul>
             <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600">
@@ -131,10 +184,10 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* --- Floating CV Button (visible always, hidden when menu open) --- */}
+      {/* --- Floating CV Button (always visible, hidden when menu open) --- */}
       {!nav && (
         <div className="fixed right-0 top-[40%] z-[999]">
-          {/* Desktop version - vertical button */}
+          {/* Desktop version */}
           <button
             onClick={openPDF}
             className="hidden md:block bg-red-700 text-white px-4 py-2 rounded-l-lg transform rotate-90 origin-bottom-right hover:bg-red-600 transition duration-300 shadow-lg"
@@ -143,7 +196,7 @@ const Navbar = () => {
             CV & Print Portfolio
           </button>
 
-          {/* Mobile version - small floating button */}
+          {/* Mobile version */}
           <button
             onClick={openPDF}
             className="md:hidden fixed bottom-20 right-3 bg-red-700 text-white px-3 py-2 rounded-lg shadow-lg hover:bg-red-600 transition duration-300 text-sm z-[999]"
