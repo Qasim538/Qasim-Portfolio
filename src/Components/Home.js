@@ -4,29 +4,43 @@ import { FaCode, FaPenFancy, FaPrint } from "react-icons/fa";
 
 const Home = () => {
   return (
-    <div name="home" className="w-full min-h-screen bg-[#0a192f] text-gray-300 py-20">
+    <div
+      name="home"
+      className="w-full min-h-screen bg-[#0a192f] text-gray-300 py-20"
+    >
       {/* Container */}
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center">
         <p className="text-red-500 mt-10">Hi, I am</p>
         <h1 className="text-4xl sm:text-7xl font-bold text-[#ccd6f6] mt-2">
           Qasim Muhammad
         </h1>
-        <small className="sm:text-2xl text-[#ccd6f6] mt-2">
-          Web Developer | Digital Designer | Senior Creative Artworker
+        <small className="sm:text-2xl text-[#ccd6f6] mt-2 tracking-wide">
+          Web Developer <span className="text-red-500">|</span> Digital Designer{" "}
+          <span className="text-red-500">|</span> Senior Creative Artworker
         </small>
 
         <p className="text-[#8892b0] py-4 max-w-[900px]">
-          I’m a Frontend Developer and UI/UX Designer with over 15 years of
-          experience in the creative and design industry. Having worked as a
-          creative artworker and designer for more than a decade, I’ve developed
-          a strong eye for detail and user-centered design.
+          I’m a <strong>Frontend Developer</strong> and{" "}
+          <strong>UI/UX Designer</strong> with over 15 years of experience in
+          the creative and design industry. Having worked as a{" "}
+          <strong>creative artworker</strong> and designer for more than a
+          decade, I’ve developed a sharp eye for detail,{" "}
+          <strong>user-centered design</strong>, and effective visual
+          storytelling. My background includes extensive experience in{" "}
+          <strong>creative artworking</strong> and{" "}
+          <strong>annual report design</strong>, where precision, consistency,
+          and collaboration are essential across both print and digital
+          projects.
           <br />
           <br />
-          My passion for modern technology led me to earn a Diploma in Frontend
-          Web Development from the University of Birmingham, where I honed my
-          skills in HTML, CSS, JavaScript, and React. Today, I bring together
-          design thinking and technical expertise to craft engaging, accessible,
-          and visually compelling digital experiences.
+          My passion for modern technology led me to earn a{" "}
+          <strong>Diploma in Frontend Web Development</strong> from the <strong>
+          University of Birmingham</strong>, where I honed my skills in
+          <strong> HTML</strong>, <strong>CSS</strong>,{" "}
+          <strong>JavaScript</strong>, <strong>React</strong>, and other modern
+          technologies. I now bring together <strong>design thinking</strong>{" "}
+          and <strong>technical expertise</strong> to craft engaging,
+          accessible, and visually compelling digital experiences.
         </p>
 
         {/* --- SKILL AREAS --- */}
@@ -40,10 +54,11 @@ const Home = () => {
               </h3>
             </div>
             <p className="text-sm text-[#ccd6f6]">
-              Building responsive, accessible, and high-performing websites using
-              modern technologies such as <strong>HTML</strong>, <strong>CSS</strong>, 
-              <strong> JavaScript</strong>, and <strong>React</strong>. Focused
-              on creating clean and efficient code with great user experience.
+              Building responsive, accessible, and high-performing websites
+              using modern technologies such as <strong>HTML</strong>,{" "}
+              <strong>CSS</strong>,<strong> JavaScript</strong>, and{" "}
+              <strong>React</strong>. Focused on creating clean and efficient
+              code with great user experience.
             </p>
           </div>
 
@@ -56,9 +71,10 @@ const Home = () => {
               </h3>
             </div>
             <p className="text-sm text-[#ccd6f6]">
-              Creating modern, user-centered designs and prototypes using 
-              <strong> Figma</strong> and <strong>Framer</strong>. Skilled in crafting
-              seamless visual experiences that blend functionality with beauty.
+              Creating modern, user-centered designs and prototypes using
+              <strong> Figma</strong> and <strong>Framer</strong>. Skilled in
+              crafting seamless visual experiences that blend functionality with
+              beauty.
             </p>
           </div>
 
@@ -71,9 +87,9 @@ const Home = () => {
               </h3>
             </div>
             <p className="text-sm text-[#ccd6f6]">
-              Over a decade of experience creating high-quality print and digital
-              assets, including brochures, campaigns, and brand materials for 
-              both online and offline platforms.
+              Over a decade of experience creating high-quality print and
+              digital assets, including brochures, campaigns, and brand
+              materials for both online and offline platforms.
             </p>
           </div>
         </div>
@@ -90,7 +106,6 @@ const Home = () => {
           </Link>
         </div>
       </div>
-
     </div>
   );
 };
