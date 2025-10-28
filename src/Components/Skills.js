@@ -13,6 +13,7 @@ import Figma from '../Assets/Figma.png'
 import Sketch from '../Assets/Sketch.svg'
 import Framer from '../Assets/framer.svg'
 import Illustrator from '../Assets/Illustrator.png'
+import WordPress from '../Assets/wordpress.png'
 
 
 const Skills = () => {
@@ -46,6 +47,10 @@ const Skills = () => {
                 <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
                     <img className='w-20 mx-auto' src={react} alt='react icon'/>
                     <p className='my-4'>React</p>
+                </div>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                    <img className='w-20 mx-auto' src={WordPress} alt='react icon'/>
+                    <p className='my-4'>WordPress</p>
                 </div>
 
                 <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>

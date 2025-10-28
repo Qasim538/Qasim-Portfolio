@@ -33,7 +33,7 @@ const Home = () => {
           projects.
           <br />
           <br />
-          I’m <span className="text-red-500" >Arabic</span> literate , and my reading and writing skills enable me to work confidently in both English and Arabic. Having lived and worked in <strong>Saudi Arabia</strong>, I bring valuable cultural awareness and understanding of the Middle Eastern market to my projects.
+          I’m <span className="text-red-500" >Arabic</span> literate and my reading and writing skills enable me to work confidently in both English and Arabic. Having lived and worked in <strong>Saudi Arabia</strong>, I bring valuable cultural awareness and understanding of the Middle Eastern market to my projects.
 
           <br />
           <br />
