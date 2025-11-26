@@ -21,8 +21,8 @@ const Home = () => {
 
         <p className="text-[#8892b0] py-4 max-w-[900px]">
           I’m a <strong>Frontend Developer</strong> and{" "}
-          <strong>UI/UX Designer</strong>
-          with over 17 years of experience in the creative and design industry.
+          <strong>UI/UX Designer </strong> 
+           with over 17 years of experience in the creative and design industry.
           Having worked as a <strong>creative artworker</strong> and designer
           for more than a decade, I’ve developed a sharp eye for detail,{" "}
           <strong>user-centered design</strong>, and effective visual
