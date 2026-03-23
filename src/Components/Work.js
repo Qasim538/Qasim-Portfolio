@@ -3,12 +3,13 @@ import proj1 from '../Assets/projects/Proj1.png'
 import proj2 from '../Assets/projects/Proj2.png'
 import proj3 from '../Assets/projects/Proj3.png'
 import proj4 from '../Assets/projects/Proj4.png'
-import proj5 from '../Assets/projects/Proj5.png'
-import proj6 from '../Assets/projects/Proj6.png'
+// import proj5 from '../Assets/projects/Proj5.png'
+// import proj6 from '../Assets/projects/Proj6.png'
 import proj7 from '../Assets/projects/Proj7.jpg'
 import proj8 from '../Assets/projects/Proj8.jpg'
 import proj9 from '../Assets/projects/Proj9.jpg'
 import proj10 from '../Assets/projects/Proj10.png'
+import proj11 from '../Assets/projects/Proj11.jpg'
 
 const Work = () => {
   return (
@@ -27,16 +28,17 @@ const Work = () => {
         <div className='grid gap-8 sm:grid-cols-2 md:grid-cols-3 w-full'>
 
           {[
+            { img: proj11, title: 'Cisco Email Figma Design and Developed HTML', desc: 'Designa and develp email design for Cisco, Webx event.', link: 'https://www.afreximbank.com/' },
             { img: proj7, title: 'Afreximbank', desc: 'I update pages when needed and enhance user interactivity.', link: 'https://www.afreximbank.com/' },
-            { img: proj10, title: 'Afreximbank', desc: 'Farewell Event Egypt.', link: 'https://presidential.afreximbankevents.com/en-home/' },
-            { img: proj8, title: 'Afreximbank', desc: 'Designed email template.', link: 'https://www.afreximbank.com/' },
+            { img: proj10, title: 'Afreximbank Landing page', desc: 'Farewell Event Egypt.', link: 'https://presidential.afreximbankevents.com/en-home/' },
+            { img: proj8, title: 'Afreximbank Email Design and Developed', desc: 'Designed email template.', link: 'https://www.afreximbank.com/' },
             { img: proj9, title: 'Vauxhall Marketing Email', desc: 'Direct marketing email design at McCann MK.', link: 'https://www.vauxhall.co.uk/' },
             { img: proj1, title: 'React JS Application', desc: '', link: 'https://harmonious-fox-7491f1.netlify.app/' },
             { img: proj2, title: 'HTML, CSS, JavaScript, API', desc: '', link: 'https://milla56.github.io/Click-Studio/index.html' },
             { img: proj3, title: 'Weather App (API)', desc: '', link: 'https://qasim538.github.io/Check-Your-City-Weather/' },
             { img: proj4, title: 'JavaScript App', desc: '', link: 'https://qasim538.github.io/My-Planner-Work-Day-Scheduler/' },
-            { img: proj5, title: 'JSON CLI App', desc: '', link: 'https://qasim538.github.io/team-profile-generator/' },
-            { img: proj6, title: 'HTML, CSS Website', desc: '', link: 'https://qasim538.github.io/Code-Refactoring-Week-1-Challenge/' },
+            // { img: proj5, title: 'JSON CLI App', desc: '', link: 'https://qasim538.github.io/team-profile-generator/' },
+            // { img: proj6, title: 'HTML, CSS Website', desc: '', link: 'https://qasim538.github.io/Code-Refactoring-Week-1-Challenge/' },
           ].map((item, index) => (
             <div key={index} className='relative w-full rounded-lg overflow-hidden shadow-lg shadow-[#040c16] bg-[#112240]'>
               

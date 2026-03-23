@@ -19,7 +19,7 @@ const Home = () => {
           <span className="text-red-500">|</span> Senior Creative Artworker
         </small>
 
-        <p className="text-[#8892b0] py-4 max-w-[900px]">
+        <p className="text-[#b9c8f5] py-4 max-w-[900px]">
           I’m a <strong>Frontend Developer</strong> and{" "}
           <strong>UI/UX Designer </strong> 
            with over 17 years of experience in the creative and design industry.
@@ -33,15 +33,14 @@ const Home = () => {
           projects.
           <br />
           <br />
-          I’m <span className="text-red-500" >Arabic</span> literate and my reading and writing skills enable me to work confidently in both English and Arabic. Having lived and worked in <strong>Saudi Arabia</strong>, I bring valuable cultural awareness and understanding of the Middle Eastern market to my projects.
+          I’m <span className="text-red-500" > <strong>Arabic</strong> </span> literate and my reading and writing skills enables me to work confidently in both English and Arabic. Having lived and worked in <strong>Saudi Arabia</strong>, I bring valuable cultural awareness and understanding of the Middle Eastern market to my projects.
 
           <br />
           <br />
           My passion for modern technology led me to earn a
           <strong> Diploma in Frontend Web Development</strong> from the
           <strong> University of Birmingham</strong>, where I honed my skills in
-          <strong> HTML</strong>, <strong>CSS</strong>,
-          <strong>JavaScript</strong>,<strong> React</strong>, and other modern
+          <strong> HTML,</strong> <strong>CSS,</strong> <strong>JavaScript,</strong><strong> React</strong> and other modern
           technologies. I now bring together design thinking and technical expertise to craft engaging, accessible,
           and visually compelling digital experiences.
         </p>
