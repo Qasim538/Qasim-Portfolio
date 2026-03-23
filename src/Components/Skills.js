@@ -14,12 +14,14 @@ import Sketch from '../Assets/Sketch.svg'
 import Framer from '../Assets/framer.svg'
 import Illustrator from '../Assets/Illustrator.png'
 import WordPress from '../Assets/wordpress.png'
+import Typescript from '../Assets/typescript.png'
 
 const skillsData = [
   { name: 'HTML', img: html },
   { name: 'CSS', img: css },
-  { name: 'JavaScript', img: javascript },
   { name: 'React', img: reactImg },
+  { name: 'JavaScript', img: javascript },
+  { name: 'Typescript', img: Typescript },
   { name: 'WordPress', img: WordPress },
   { name: 'Node', img: node },
   { name: 'Tailwind', img: tailwind },
