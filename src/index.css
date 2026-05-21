@@ -31,3 +31,13 @@
     )!important;
     
 }
+
+body{
+    background:#f7f8fc;
+    color:#122254;
+    font-family:'Inter',sans-serif;
+  }
+  
+  .font-heading{
+    font-family:'Space Grotesk',sans-serif;
+  }

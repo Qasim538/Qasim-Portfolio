@@ -1,28 +1,86 @@
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-scroll";
 import { FaCode, FaPenFancy, FaPrint } from "react-icons/fa";
+import { useEffect } from "react";
+import gsap from "gsap";
 
 const Home = () => {
+
+  useEffect(() => {
+
+    // entrance animation only once
+    gsap.fromTo(
+      ".heroFade",
+      {
+        opacity: 0,
+        y: 30,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: 0.12,
+        ease: "power3.out",
+      }
+    );
+  
+    // independent floating cards
+    gsap.to(".card1", {
+      y: -18,
+      duration: 3,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+    });
+  
+    gsap.to(".card2", {
+      y: -18,
+      x: 8,
+      duration: 4,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+    });
+  
+    gsap.to(".card3", {
+      y: -20,
+      duration: 3.5,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+    });
+  
+  }, []);
+
   return (
     <div
       name="home"
-      className="w-full min-h-screen bg-[#0a192f] text-gray-300 py-20"
+      className="w-full min-h-screen bg-[#f5f7fb] text-[#233554] py-20 relative overflow-hidden"
     >
+
+      {/* background blur */}
+      <div className="absolute top-[-120px] right-[-120px] w-[420px] h-[420px] bg-red-200/30 blur-[120px] rounded-full"></div>
+
       {/* Container */}
-      <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center">
-        <p className="text-red-500 mt-10">Hi, I am</p>
-        <h1 className="text-4xl sm:text-7xl font-bold text-[#ccd6f6] mt-2">
+      <div className="max-w-[1100px] mx-auto px-8 flex flex-col justify-center relative z-10">
+
+        <p className="heroFade text-red-500 mt-10 tracking-[3px] uppercase text-sm font-semibold">
+          Hi, I am
+        </p>
+
+        <h1 className="heroFade text-4xl sm:text-7xl font-black text-[#122254] mt-3 leading-tight">
           Qasim Muhammad
         </h1>
-        <small className="sm:text-2xl text-[#ccd6f6] mt-2 tracking-wide">
-          Web Developer <span className="text-red-500">|</span> Digital Designer{" "}
-          <span className="text-red-500">|</span> Senior Creative Artworker
+
+        <small className="heroFade sm:text-2xl text-[#3c4b6e] mt-4 tracking-wide leading-9">
+          Web Developer <span className="text-red-500">|</span> Designer{" "}
+          <span className="text-red-500">|</span> Creative Artworker
         </small>
 
-        <p className="text-[#b9c8f5] py-4 max-w-[900px]">
+        <p className="heroFade text-[#5c6574] py-6 max-w-[950px] leading-9 text-[16px]">
           I’m a <strong>Frontend Developer</strong> and{" "}
-          <strong>UI/UX Designer </strong> 
-           with over 17 years of experience in the creative and design industry.
+          <strong>UI/UX Designer </strong>
+          with over 17 years of experience in the creative and design industry.
           Having worked as a <strong>creative artworker</strong> and designer
           for more than a decade, I’ve developed a sharp eye for detail,{" "}
           <strong>user-centered design</strong>, and effective visual
@@ -33,7 +91,7 @@ const Home = () => {
           projects.
           <br />
           <br />
-          I’m <span className="text-red-500" > <strong>Arabic</strong> </span> literate and my reading and writing skills enables me to work confidently in both English and Arabic. Having lived and worked in <strong>Saudi Arabia</strong>, I bring valuable cultural awareness and understanding of the Middle Eastern market to my projects.
+          I’m <span className="text-red-500"><strong>Arabic</strong></span> literate and my reading and writing skills enables me to work confidently in both English and Arabic. Having lived and worked in <strong>Saudi Arabia</strong>, I bring valuable cultural awareness and understanding of the Middle Eastern market to my projects.
 
           <br />
           <br />
@@ -46,16 +104,22 @@ const Home = () => {
         </p>
 
         {/* --- SKILL AREAS --- */}
-        <div className="grid sm:grid-cols-3 gap-6 mt-8">
+        <div className="grid sm:grid-cols-3 gap-7 mt-10">
+
           {/* Web Developer */}
-          <div className="bg-[#112240] rounded-2xl p-6 hover:shadow-lg hover:shadow-red-500/20 transition duration-300">
-            <div className="flex items-center gap-3 mb-3">
-              <FaCode className="text-red-500 text-3xl" />
-              <h3 className="text-xl font-semibold text-[#8892b0]">
+          <div className="floatingCard bg-white/90 backdrop-blur-md border border-white rounded-[28px] p-7 shadow-xl hover:-translate-y-2 hover:shadow-red-200/40 transition duration-500">
+
+            <div className="flex items-center gap-4 mb-5">
+              <div className="w-[58px] h-[58px] rounded-2xl bg-red-100 flex items-center justify-center">
+                <FaCode className="text-red-500 text-2xl" />
+              </div>
+
+              <h3 className="text-xl font-bold text-[#122254]">
                 Web Developer
               </h3>
             </div>
-            <p className="text-sm text-[#ccd6f6]">
+
+            <p className="text-[15px] leading-8 text-[#5c6574]">
               Building responsive, accessible, and high-performing websites
               using modern technologies such as <strong>HTML</strong>,{" "}
               <strong>CSS</strong>,<strong> JavaScript</strong>, and{" "}
@@ -65,14 +129,20 @@ const Home = () => {
           </div>
 
           {/* Digital Designer */}
-          <div className="bg-[#112240] rounded-2xl p-6 hover:shadow-lg hover:shadow-red-500/20 transition duration-300">
-            <div className="flex items-center gap-3 mb-3">
-              <FaPenFancy className="text-red-500 text-3xl" />
-              <h3 className="text-xl font-semibold text-[#8892b0]">
+          <div className="card2 bg-[#122254] text-white rounded-[28px] p-7 shadow-2xl hover:-translate-y-2 transition duration-500">
+
+            <div className="flex items-center gap-4 mb-5">
+
+              <div className="w-[58px] h-[58px] rounded-2xl bg-red-500/20 flex items-center justify-center">
+                <FaPenFancy className="text-red-400 text-2xl" />
+              </div>
+
+              <h3 className="text-xl font-bold">
                 Digital Designer
               </h3>
             </div>
-            <p className="text-sm text-[#ccd6f6]">
+
+            <p className="text-[15px] leading-8 text-gray-300">
               Creating modern, user-centered designs and prototypes using
               <strong> Figma</strong> and <strong>Framer</strong>. Skilled in
               crafting seamless visual experiences that blend functionality with
@@ -81,31 +151,41 @@ const Home = () => {
           </div>
 
           {/* Print & Digital Artwork */}
-          <div className="bg-[#112240] rounded-2xl p-6 hover:shadow-lg hover:shadow-red-500/20 transition duration-300">
-            <div className="flex items-center gap-3 mb-3">
-              <FaPrint className="text-red-500 text-3xl" />
-              <h3 className="text-xl font-semibold text-[#8892b0]">
-                Senior Creative Artworker
+          <div className="card3 bg-gradient-to-br from-red-500 to-orange-400 text-white rounded-[28px] p-7 shadow-2xl hover:-translate-y-2 transition duration-500">
+
+            <div className="flex items-center gap-4 mb-5">
+
+              <div className="w-[58px] h-[58px] rounded-2xl bg-white/20 flex items-center justify-center">
+                <FaPrint className="text-white text-2xl" />
+              </div>
+
+              <h3 className="text-xl font-bold">
+                Creative Artworker
               </h3>
             </div>
-            <p className="text-sm text-[#ccd6f6]">
-              Over a decade of experience producing high-quality print and digital assets, including annual reports, POS materials, OOH and digital OOH campaigns, as well as brochures and brand collateral for both online and offline platforms.
 
+            <p className="text-[15px] leading-8 text-white/90">
+              Over a decade of experience producing high-quality print and digital assets, including annual reports, POS materials, OOH and digital OOH campaigns, as well as brochures and brand collateral for both online and offline platforms.
             </p>
           </div>
+
         </div>
 
         {/* --- Work Button --- */}
-        <div className="mt-10">
+        <div className="heroFade mt-14">
           <Link to="work" smooth={true} offset={50} duration={500}>
-            <button className="text-white border-2 px-6 py-3 flex items-center hover:bg-red-500 hover:border-red-500 transition duration-300">
+            <button className="group bg-[#122254] text-white px-8 py-5 rounded-full flex items-center hover:bg-red-500 transition duration-300 shadow-xl">
+
               Work
-              <span className="hover:rotate-90 duration-100">
-                <HiArrowNarrowRight className="ml-3" />
+
+              <span className="group-hover:translate-x-2 group-hover:rotate-[-10deg] duration-300">
+                <HiArrowNarrowRight className="ml-3 text-xl" />
               </span>
+
             </button>
           </Link>
         </div>
+
       </div>
     </div>
   );

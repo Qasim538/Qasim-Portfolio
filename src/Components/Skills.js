@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import gsap from 'gsap'
+
 import html from '../Assets/html.png'
 import css from '../Assets/css.png'
 import github from '../Assets/github.png'
@@ -36,29 +38,79 @@ const skillsData = [
 ]
 
 const Skills = () => {
+
+  useEffect(() => {
+
+    gsap.fromTo(
+      ".skillsFade",
+      {
+        opacity: 0,
+        y: 30,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: 0.08,
+        ease: "power3.out",
+      }
+    )
+
+    gsap.to(".floatingSkill", {
+      y: -8,
+      duration: 2.5,
+      stagger: {
+        each: 0.08,
+        from: "random",
+      },
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+    })
+
+  }, [])
+
   return (
-    <div name='skills' className='bg-[#0a192f] text-gray-300'>
-      
-      <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
-        
-        <div>
-          <p className='text-4xl font-bold inline border-b-4 border-b-red-500'>Skills</p>
-          <p className='py-4'>These are the technologies I have worked with.</p>
+    <div
+      name='skills'
+      className='bg-[#f5f7fb] text-[#233554] py-24 relative overflow-hidden'
+    >
+
+      {/* subtle background blur */}
+      <div className='absolute bottom-[-120px] left-[-120px] w-[350px] h-[350px] bg-blue-200/30 blur-[120px] rounded-full'></div>
+
+      <div className='max-w-[1100px] mx-auto px-6 flex flex-col justify-center w-full h-full relative z-10'>
+
+        <div className='skillsFade'>
+          <p className='text-4xl font-black inline border-b-4 border-b-red-500 text-[#122254] pb-2'>
+            Skills
+          </p>
+
+          <p className='py-6 text-[#5c6574] text-lg'>
+            These are the technologies I have worked with.
+          </p>
         </div>
 
-        <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8'>
-          
+        <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-6 text-center py-8'>
+
           {skillsData.map((skill, index) => (
             <div
               key={index}
-              className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'
+              className='floatingSkill skillsFade bg-white/80 backdrop-blur-md border border-white rounded-[28px] p-7 shadow-xl hover:-translate-y-2 hover:shadow-red-100/50 transition duration-500 group'
             >
-              <img
-                className={`${skill.height ? 'h-20' : 'w-20'} mx-auto`}
-                src={skill.img}
-                alt={`${skill.name} icon`}
-              />
-              <p className='my-4'>{skill.name}</p>
+
+              <div className='flex items-center justify-center h-[90px]'>
+                <img
+                  className={`${skill.height ? 'h-20' : 'w-20'} mx-auto object-contain group-hover:scale-110 transition duration-300`}
+                  src={skill.img}
+                  alt={`${skill.name} icon`}
+                />
+              </div>
+
+              <p className='mt-5 text-[#122254] font-semibold tracking-wide'>
+                {skill.name}
+              </p>
+
             </div>
           ))}
 
