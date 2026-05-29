@@ -87,40 +87,42 @@ const projects = [
 
 const Work = () => {
   useEffect(() => {
+    // entrance animation (same clean style as Skills)
     gsap.fromTo(
       ".workFade",
       {
         opacity: 0,
-        y: 40,
+        y: 15,
       },
       {
         opacity: 1,
         y: 0,
-        duration: 1,
-        stagger: 0.12,
-        ease: "power3.out",
+        duration: 0.8,
+        stagger: 0.05,
+        ease: "power2.out",
       }
     );
 
+    // subtle floating (NOT aggressive anymore)
     gsap.to(".float1", {
-      y: -12,
-      duration: 3,
+      y: -4,
+      duration: 5,
       repeat: -1,
       yoyo: true,
       ease: "sine.inOut",
     });
 
     gsap.to(".float2", {
-      y: -18,
-      duration: 4,
+      y: -5,
+      duration: 6,
       repeat: -1,
       yoyo: true,
       ease: "sine.inOut",
     });
 
     gsap.to(".float3", {
-      y: -10,
-      duration: 3.5,
+      y: -4,
+      duration: 5.5,
       repeat: -1,
       yoyo: true,
       ease: "sine.inOut",
@@ -128,27 +130,30 @@ const Work = () => {
   }, []);
 
   return (
-    <div
+    <section
       name="work"
-      className="w-full min-h-screen bg-[#f5f7fb] py-24 text-[#233554] relative overflow-hidden"
+      className="bg-[#f5f7fb] py-20 text-[#233554] relative overflow-hidden"
     >
       {/* background blur */}
-      <div className="absolute top-[10%] left-[-120px] w-[320px] h-[320px] bg-blue-200/30 blur-[120px] rounded-full"></div>
+      <div className="absolute top-[10%] left-[-120px] w-[300px] h-[300px] bg-blue-200/20 blur-[120px] rounded-full"></div>
 
-      <div className="max-w-[1300px] mx-auto px-6 flex flex-col justify-center w-full h-full relative z-10">
+      {/* same width as Skills */}
+      <div className="max-w-[1100px] mx-auto px-6 flex flex-col justify-center w-full h-full relative z-10">
+
         {/* Heading */}
-        <div className="pb-16 text-center workFade">
-          <p className="text-5xl font-black inline border-b-4 text-[#122254] border-red-500 pb-2">
+        <div className="pb-10 workFade">
+          <p className="text-4xl font-black inline-block border-b-4 border-red-500 text-[#122254] pb-2">
             Work
           </p>
 
-          <p className="py-6 text-lg text-[#5c6574]">
+          <p className="mt-5 text-lg text-[#5c6574]">
             Check out some of my recent works.
           </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[260px] gap-7 w-full">
+        {/* Grid (same softness as Skills cards) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[220px] gap-4 w-full">
+
           {projects.map((item, index) => (
             <div
               key={index}
@@ -157,17 +162,19 @@ const Work = () => {
                 ${index % 3 === 0 ? "float1" : ""}
                 ${index % 3 === 1 ? "float2" : ""}
                 ${index % 3 === 2 ? "float3" : ""}
-                
+
                 group
                 relative
                 overflow-hidden
-                rounded-[30px]
-                shadow-xl
+                rounded-xl
                 bg-white
-                
-                hover:-translate-y-2
-                transition
-                duration-500
+                border border-slate-100
+                shadow-sm
+
+                hover:-translate-y-1
+                hover:shadow-md
+                transition-all
+                duration-300
 
                 ${item.large ? "lg:col-span-2 lg:row-span-2" : ""}
                 ${item.wide ? "lg:col-span-2" : ""}
@@ -179,42 +186,40 @@ const Work = () => {
                 <img
                   src={item.img}
                   alt={item.title}
-                  className="w-full h-full object-cover object-top group-hover:scale-110 transition duration-700"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
                 />
 
-                {/* overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#122254]/95 via-[#122254]/40 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#122254]/90 via-[#122254]/40 to-transparent"></div>
               </div>
 
               {/* content */}
-              <div className="relative z-10 flex flex-col h-full justify-end p-6">
+              <div className="relative z-10 flex flex-col h-full justify-end p-5">
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-3 leading-tight">
+                  <h3 className="text-xl font-bold text-white mb-2">
                     {item.title}
                   </h3>
 
                   {item.desc && (
-                    <p className="text-gray-200 text-sm leading-7 mb-5">
+                    <p className="text-gray-200 text-sm mb-4">
                       {item.desc}
                     </p>
                   )}
 
-                  {/* icons */}
-                  <div className="flex gap-3 mb-6 flex-wrap">
-                    {item.software.map(
-                      (tech, i) =>
-                        techIcons[tech] && (
-                          <div
-                            key={i}
-                            className="w-[36px] h-[36px] rounded-xl bg-white/15 backdrop-blur-md flex items-center justify-center"
-                          >
-                            <img
-                              src={techIcons[tech]}
-                              alt={tech}
-                              className="w-5 h-5 object-contain"
-                            />
-                          </div>
-                        )
+                  {/* tech icons (same style as Skills size) */}
+                  <div className="flex gap-2 flex-wrap mb-4">
+                    {item.software.map((tech, i) =>
+                      techIcons[tech] ? (
+                        <div
+                          key={i}
+                          className="w-[32px] h-[32px] rounded-lg bg-white/15 backdrop-blur-sm flex items-center justify-center"
+                        >
+                          <img
+                            src={techIcons[tech]}
+                            alt={tech}
+                            className="w-4 h-4 object-contain"
+                          />
+                        </div>
+                      ) : null
                     )}
                   </div>
                 </div>
@@ -224,7 +229,7 @@ const Work = () => {
                   href={item.link}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-full text-center py-3 rounded-2xl bg-white text-[#122254] font-semibold hover:bg-red-500 hover:text-white transition duration-300"
+                  className="w-full text-center py-2.5 rounded-xl bg-white text-[#122254] font-medium hover:bg-red-500 hover:text-white transition duration-300"
                 >
                   View Project →
                 </a>
@@ -232,8 +237,9 @@ const Work = () => {
             </div>
           ))}
         </div>
+
       </div>
-    </div>
+    </section>
   );
 };
 

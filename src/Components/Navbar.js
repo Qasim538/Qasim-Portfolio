@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <>
       {/* NAVBAR */}
-      <div className="fixed w-full h-[80px] flex justify-between items-center px-5 md:px-20 bg-[#c6e1fe]  text-[#071325] z-50">
+      <div className="fixed w-full h-[80px] flex justify-between items-center px-5 md:px-20 bg-white/40   text-[#071325] z-50">
         {/* Logo */}
         <div>
           <img src={logo} alt="Logo" style={{ width: "50px" }} />
@@ -74,7 +74,7 @@ const Navbar = () => {
             <button
               type="button"
               onClick={openPDF}
-              className="hover:text-white cursor-pointer bg-red-700 px-4 py-1.5 rounded text-sm"
+              className="hover:text-white cursor-pointer bg-red-500 px-4 py-1.5 rounded text-sm"
             >
               CV & Print Portfolio
             </button>
