@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Qasim-Portfolio/static/css/main.87468924.css",
-    "main.js": "/Qasim-Portfolio/static/js/main.ed842103.js",
+    "main.css": "/Qasim-Portfolio/static/css/main.cc65175f.css",
+    "main.js": "/Qasim-Portfolio/static/js/main.4da406aa.js",
     "static/media/Proj2.png": "/Qasim-Portfolio/static/media/Proj2.81e099c324b9d004022d.png",
     "static/media/Proj1.png": "/Qasim-Portfolio/static/media/Proj1.fe8484cd8b8ed561220d.png",
     "static/media/Proj10.png": "/Qasim-Portfolio/static/media/Proj10.37f052ccd685e195b586.png",
@@ -28,12 +28,12 @@
     "static/media/javascript.png": "/Qasim-Portfolio/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "static/media/Sketch.svg": "/Qasim-Portfolio/static/media/Sketch.99f9ecb07dc0334ba2b7559c56753e82.svg",
     "index.html": "/Qasim-Portfolio/index.html",
-    "static/media/framer.svg": "/Qasim-Portfolio/static/media/framer.1e7013357103f19c3e0c91aaaf122358.svg",
-    "main.87468924.css.map": "/Qasim-Portfolio/static/css/main.87468924.css.map",
-    "main.ed842103.js.map": "/Qasim-Portfolio/static/js/main.ed842103.js.map"
+    "static/media/framer copy.svg": "/Qasim-Portfolio/static/media/framer copy.1e7013357103f19c3e0c91aaaf122358.svg",
+    "main.cc65175f.css.map": "/Qasim-Portfolio/static/css/main.cc65175f.css.map",
+    "main.4da406aa.js.map": "/Qasim-Portfolio/static/js/main.4da406aa.js.map"
   },
   "entrypoints": [
-    "static/css/main.87468924.css",
-    "static/js/main.ed842103.js"
+    "static/css/main.cc65175f.css",
+    "static/js/main.4da406aa.js"
   ]
 }
