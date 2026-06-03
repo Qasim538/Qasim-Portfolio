@@ -116,36 +116,71 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div
-          className={
-            !nav
-              ? "hidden"
-              : "absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center z-40"
-          }
-        >
-          <ul className="text-center">
-            <li className="py-6 text-4xl">
-              <Link onClick={handleClick} to="home" smooth offset={50} duration={500}>
-                Home
-              </Link>
-            </li>
-            <li className="py-6 text-4xl">
-              <Link onClick={handleClick} to="skills" smooth offset={50} duration={500}>
-                Skills
-              </Link>
-            </li>
-            <li className="py-6 text-4xl">
-              <Link onClick={handleClick} to="work" smooth offset={50} duration={500}>
-                Work
-              </Link>
-            </li>
-            <li className="py-6 text-4xl">
-              <Link onClick={handleClick} to="contact" smooth offset={50} duration={500}>
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </div>
+    {/* Mobile Menu */}
+<div
+  className={
+    !nav
+      ? "hidden"
+      : "absolute top-0 left-0 w-full h-screen bg-white flex flex-col justify-center items-center z-40"
+  }
+>
+  {/* optional subtle background glow */}
+  <div className="absolute inset-0 bg-gradient-to-b from-slate-50 to-white"></div>
+
+  <ul className="text-center relative z-10">
+    <li className="py-5 text-3xl font-semibold text-[#122254]">
+      <Link
+        onClick={handleClick}
+        to="home"
+        smooth
+        offset={50}
+        duration={500}
+        className="hover:text-red-500 transition"
+      >
+        Home
+      </Link>
+    </li>
+
+    <li className="py-5 text-3xl font-semibold text-[#122254]">
+      <Link
+        onClick={handleClick}
+        to="skills"
+        smooth
+        offset={50}
+        duration={500}
+        className="hover:text-red-500 transition"
+      >
+        Skills
+      </Link>
+    </li>
+
+    <li className="py-5 text-3xl font-semibold text-[#122254]">
+      <Link
+        onClick={handleClick}
+        to="work"
+        smooth
+        offset={50}
+        duration={500}
+        className="hover:text-red-500 transition"
+      >
+        Work
+      </Link>
+    </li>
+
+    <li className="py-5 text-3xl font-semibold text-[#122254]">
+      <Link
+        onClick={handleClick}
+        to="contact"
+        smooth
+        offset={50}
+        duration={500}
+        className="hover:text-red-500 transition"
+      >
+        Contact
+      </Link>
+    </li>
+  </ul>
+</div>
 
         {/* Social Icons (Desktop only - sidebar) */}
         <div className="hidden lg:flex fixed flex-col top-[35%] left-0 z-[60]">

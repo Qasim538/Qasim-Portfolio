@@ -1,16 +1,15 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import gsap from "gsap";
 
 import proj1 from "../Assets/projects/Proj1.png";
-import proj2 from "../Assets/projects/Proj2.png";
-import proj3 from "../Assets/projects/Proj3.png";
-import proj4 from "../Assets/projects/Proj4.png";
 import proj7 from "../Assets/projects/Proj7.jpg";
 import proj8 from "../Assets/projects/Proj8.jpg";
 import proj9 from "../Assets/projects/Proj9.jpg";
 import proj10 from "../Assets/projects/Proj10.png";
 import proj11 from "../Assets/projects/Proj11.jpg";
 import proj12 from "../Assets/projects/Proj12.jpg";
+import tombolaThumb from "../Assets/projects/Tombola.jpg";
 
 // Icons
 import html from "../Assets/html.png";
@@ -69,6 +68,7 @@ const projects = [
     software: ["Figma", "HTML", "CSS"],
     wide: true,
   },
+
   {
     img: proj8,
     title: "Email Design",
@@ -82,6 +82,14 @@ const projects = [
     desc: "",
     link: "https://harmonious-fox-7491f1.netlify.app/",
     software: ["React", "CSS"],
+  },
+  {
+    img: tombolaThumb,
+    title: "Tombola HTML5 Banner Campaign",
+    desc: "6 live HTML5 display banners running simultaneously.",
+    link: "/tombola-banners",
+    software: ["HTML", "CSS", "JavaScript"],
+    wide: true,
   },
 ];
 
@@ -139,7 +147,6 @@ const Work = () => {
 
       {/* same width as Skills */}
       <div className="max-w-[1100px] mx-auto px-6 flex flex-col justify-center w-full h-full relative z-10">
-
         {/* Heading */}
         <div className="pb-10 workFade">
           <p className="text-4xl font-black inline-block border-b-4 border-red-500 text-[#122254] pb-2">
@@ -153,7 +160,6 @@ const Work = () => {
 
         {/* Grid (same softness as Skills cards) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[220px] gap-4 w-full">
-
           {projects.map((item, index) => (
             <div
               key={index}
@@ -200,9 +206,7 @@ const Work = () => {
                   </h3>
 
                   {item.desc && (
-                    <p className="text-gray-200 text-sm mb-4">
-                      {item.desc}
-                    </p>
+                    <p className="text-gray-200 text-sm mb-4">{item.desc}</p>
                   )}
 
                   {/* tech icons (same style as Skills size) */}
@@ -225,19 +229,27 @@ const Work = () => {
                 </div>
 
                 {/* button */}
-                <a
-                  href={item.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-full text-center py-2.5 rounded-xl bg-white text-[#122254] font-medium hover:bg-red-500 hover:text-white transition duration-300"
-                >
-                  View Project →
-                </a>
+                {item.link.startsWith("/") ? (
+                  <Link
+                    to={item.link}
+                    className="block w-full text-center py-2.5 rounded-xl bg-white text-[#122254] font-medium hover:bg-red-500 hover:text-white transition duration-300"
+                  >
+                    View Project →
+                  </Link>
+                ) : (
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="block w-full text-center py-2.5 rounded-xl bg-white text-[#122254] font-medium hover:bg-red-500 hover:text-white transition duration-300"
+                  >
+                    View Project →
+                  </a>
+                )}
               </div>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
