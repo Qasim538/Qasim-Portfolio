@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -62,7 +63,17 @@ export default function TombolaBanners() {
   };
 
   return (
+    
     <section className="bg-[#f5f7fb] text-[#233554] py-20 relative overflow-hidden">
+             {/* CTA */}
+             <div className="skillsFade text-center mt-14">
+          <Link
+            to="/"
+            className="inline-flex px-6 py-3 bg-[#848484] text-[#233554] rounded-full hover:bg-[#1b2f66] transition"
+          >
+            ← Back to Portfolio
+          </Link>
+        </div>
       {/* glow */}
       <div className="absolute bottom-[-120px] left-[-120px] w-[300px] h-[300px] bg-blue-200/20 blur-[120px] rounded-full"></div>
 
