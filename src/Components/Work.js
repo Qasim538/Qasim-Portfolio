@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 
-import proj1 from "../Assets/projects/Proj1.png";
 import proj7 from "../Assets/projects/Proj7.jpg";
 import proj8 from "../Assets/projects/Proj8.jpg";
 import proj9 from "../Assets/projects/Proj9.jpg";
@@ -11,7 +10,6 @@ import proj11 from "../Assets/projects/Proj11.jpg";
 import proj12 from "../Assets/projects/Proj12.jpg";
 import tombolaThumb from "../Assets/projects/Tombola.jpg";
 
-// Icons
 import html from "../Assets/html.png";
 import css from "../Assets/css.png";
 import javascript from "../Assets/javascript.png";
@@ -19,83 +17,91 @@ import reactImg from "../Assets/react.png";
 import Figma from "../Assets/Figma.png";
 import Photoshop from "../Assets/Photoshop.png";
 
-// Tech map
 const techIcons = {
   HTML: html,
   CSS: css,
   JavaScript: javascript,
   React: reactImg,
-  Figma: Figma,
-  Photoshop: Photoshop,
+  Figma,
+  Photoshop,
 };
-
 const projects = [
   {
     img: proj12,
     title: "Google Pixel 10 Launch",
-    desc: "Figma → Photoshop → HTML email build.",
-    link: "https://store.google.com/gb/product/pixel_10_pro?hl=en-GB&pli=1",
+    category: "Email Campaign",
+    desc: "Designed in Figma, refined in Photoshop and developed into a responsive HTML email.",
+    link: "/google-pixel",
     software: ["Figma", "Photoshop", "HTML", "CSS"],
+    featured: true,
     large: true,
   },
+
   {
-    img: proj11,
-    title: "Cisco Email Design",
-    desc: "Figma → HTML email build.",
-    link: "https://www.webex.com/",
-    software: ["Figma", "HTML", "CSS"],
+    img: proj7,
+    title: "Afreximbank Digital Experience",
+    category: "Enterprise Web Development",
+    desc: "Design, development and maintenance of responsive web pages supporting one of Africa's leading trade finance institutions.",
+    link: "/afreximbank",
+    software: ["HTML", "CSS", "JavaScript", "React"],
+    featured: true,
+    tall: true,
   },
+
   {
-    img: proj9,
-    title: "Marketing Email",
-    desc: "Vauxhall campaign.",
-    link: "https://www.vauxhall.co.uk/",
+    img: proj8,
+    title: "Afreximbank Email Campaign",
+    category: "Responsive Email",
+    desc: "Responsive email campaigns designed and developed to support Afreximbank marketing communications.",
+    link: "/afreximbank",
     software: ["Figma", "HTML", "CSS"],
     tall: true,
   },
+
   {
-    img: proj7,
-    title: "Afreximbank",
-    desc: "Website updates & interactivity.",
-    link: "https://www.afreximbank.com/",
+    img: tombolaThumb,
+    title: "Tombola HTML5 Banner Campaign",
+    category: "Display Advertising",
+    desc: "Six HTML5 banner executions built with JavaScript and GSAP animations.",
+    link: "/tombola-banners",
     software: ["HTML", "CSS", "JavaScript"],
+    featured: true,
+    wide: true,
   },
+
   {
     img: proj10,
-    title: "Landing Page",
-    desc: "Event landing page.",
-    link: "https://www.afreximbank.com/",
+    title: "Afreximbank Event Landing Page",
+    category: "Landing Page",
+    desc: "Responsive landing page designed and developed for Afreximbank campaigns and events.",
+    link: "/afreximbank",
     software: ["Figma", "HTML", "CSS"],
     wide: true,
   },
 
   {
-    img: proj8,
-    title: "Email Design",
-    desc: "Responsive email template.",
-    link: "https://www.afreximbank.com/",
+    img: proj11,
+    title: "Cisco Email Design",
+    category: "Email Development",
+    desc: "Responsive email campaign designed and developed for multiple devices.",
+    link: "/cisco-email",
     software: ["Figma", "HTML", "CSS"],
+    tall: true,
   },
+
   {
-    img: proj1,
-    title: "React App",
-    desc: "",
-    link: "https://harmonious-fox-7491f1.netlify.app/",
-    software: ["React", "CSS"],
-  },
-  {
-    img: tombolaThumb,
-    title: "Tombola HTML5 Banner Campaign",
-    desc: "6 live HTML5 display banners running simultaneously.",
-    link: "/tombola-banners",
-    software: ["HTML", "CSS", "JavaScript"],
-    wide: true,
+    img: proj9,
+    title: "Vauxhall Marketing Email",
+    category: "Email Campaign",
+    desc: "Marketing email design focused on engagement and conversions.",
+    link: "/vauxhall-campaign",
+    software: ["Figma", "HTML", "CSS"],
+    tall: true,
   },
 ];
 
 const Work = () => {
   useEffect(() => {
-    // entrance animation (same clean style as Skills)
     gsap.fromTo(
       ".workFade",
       {
@@ -110,112 +116,92 @@ const Work = () => {
         ease: "power2.out",
       }
     );
-
-    // subtle floating (NOT aggressive anymore)
-    gsap.to(".float1", {
-      y: -4,
-      duration: 5,
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut",
-    });
-
-    gsap.to(".float2", {
-      y: -5,
-      duration: 6,
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut",
-    });
-
-    gsap.to(".float3", {
-      y: -4,
-      duration: 5.5,
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut",
-    });
   }, []);
 
   return (
     <section
-      name="work"
+      id="work"
       className="bg-[#f5f7fb] py-20 text-[#233554] relative overflow-hidden"
     >
-      {/* background blur */}
+      {" "}
       <div className="absolute top-[10%] left-[-120px] w-[300px] h-[300px] bg-blue-200/20 blur-[120px] rounded-full"></div>
-
-      {/* same width as Skills */}
-      <div className="max-w-[1100px] mx-auto px-6 flex flex-col justify-center w-full h-full relative z-10">
-        {/* Heading */}
+      <div className="max-w-[1100px] mx-auto px-6 relative z-10">
         <div className="pb-10 workFade">
           <p className="text-4xl font-black inline-block border-b-4 border-red-500 text-[#122254] pb-2">
             Work
           </p>
 
-          <p className="mt-5 text-lg text-[#5c6574]">
-            Check out some of my recent works.
+          <p className="mt-5 text-lg text-[#5c6574] max-w-2xl">
+            Selected projects spanning email development, front-end engineering,
+            HTML5 advertising and digital design.
+          </p>
+
+          <p className="mt-2 text-sm text-slate-400">
+            Featured client and personal projects
           </p>
         </div>
 
-        {/* Grid (same softness as Skills cards) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[220px] gap-4 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[280px] gap-4">
           {projects.map((item, index) => (
             <div
               key={index}
               className={`
-                workFade
-                ${index % 3 === 0 ? "float1" : ""}
-                ${index % 3 === 1 ? "float2" : ""}
-                ${index % 3 === 2 ? "float3" : ""}
+            workFade
+            group
+            relative
+            overflow-hidden
+            rounded-xl
+            bg-white
+            border border-slate-100
+            shadow-sm
+            hover:-translate-y-1
+            hover:shadow-lg
+            transition-all
+            duration-300
 
-                group
-                relative
-                overflow-hidden
-                rounded-xl
-                bg-white
-                border border-slate-100
-                shadow-sm
-
-                hover:-translate-y-1
-                hover:shadow-md
-                transition-all
-                duration-300
-
-                ${item.large ? "lg:col-span-2 lg:row-span-2" : ""}
-                ${item.wide ? "lg:col-span-2" : ""}
-                ${item.tall ? "lg:row-span-2" : ""}
-              `}
+            ${item.large ? "lg:col-span-2 lg:row-span-1" : ""}
+            ${item.wide ? "lg:col-span-2 lg:row-span-1" : ""}
+            ${item.tall ? "lg:row-span-1" : ""}
+          `}
             >
-              {/* image */}
               <div className="absolute inset-0 overflow-hidden">
                 <img
                   src={item.img}
                   alt={item.title}
-                  className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-700"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#122254]/90 via-[#122254]/40 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#122254]/95 via-[#122254]/40 to-transparent"></div>
+
+                <div className="absolute inset-0 bg-[#122254]/20 opacity-0 group-hover:opacity-100 transition duration-300"></div>
               </div>
 
-              {/* content */}
+              {item.featured && (
+                <div className="absolute top-4 left-4 z-20">
+                  <span className="bg-white text-[#122254] text-xs font-semibold px-3 py-1 rounded-full">
+                    Featured
+                  </span>
+                </div>
+              )}
+
               <div className="relative z-10 flex flex-col h-full justify-end p-5">
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">
+                  <p className="text-xs uppercase tracking-[2px] text-red-300 mb-2">
+                    {item.category}
+                  </p>
+
+                  <h3 className="text-xl lg:text-2xl font-black text-white mb-2 leading-tight">
                     {item.title}
                   </h3>
 
-                  {item.desc && (
-                    <p className="text-gray-200 text-sm mb-4">{item.desc}</p>
-                  )}
+                  <p className="text-gray-200 text-sm mb-4">{item.desc}</p>
 
-                  {/* tech icons (same style as Skills size) */}
-                  <div className="flex gap-2 flex-wrap mb-4">
+                  <div className="flex gap-2 flex-wrap mb-5">
                     {item.software.map((tech, i) =>
                       techIcons[tech] ? (
                         <div
                           key={i}
-                          className="w-[32px] h-[32px] rounded-lg bg-white/15 backdrop-blur-sm flex items-center justify-center"
+                          className="w-8 h-8 rounded-lg bg-white/15 backdrop-blur-sm flex items-center justify-center"
                         >
                           <img
                             src={techIcons[tech]}
@@ -228,24 +214,25 @@ const Work = () => {
                   </div>
                 </div>
 
-                {/* button */}
-                {item.link.startsWith("/") ? (
-                  <Link
-                    to={item.link}
-                    className="block w-full text-center py-2.5 rounded-xl bg-white text-[#122254] font-medium hover:bg-red-500 hover:text-white transition duration-300"
-                  >
-                    View Project →
-                  </Link>
-                ) : (
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="block w-full text-center py-2.5 rounded-xl bg-white text-[#122254] font-medium hover:bg-red-500 hover:text-white transition duration-300"
-                  >
-                    View Project →
-                  </a>
-                )}
+                <Link
+                  to={item.link}
+                  className="
+                inline-flex
+                items-center
+                justify-center
+                w-full
+                py-2
+                rounded-lg
+                bg-white/95
+                text-[#122254]
+                text-sm
+                font-medium
+                hover:bg-white
+                transition
+              "
+                >
+                  View Case Study
+                </Link>
               </div>
             </div>
           ))}

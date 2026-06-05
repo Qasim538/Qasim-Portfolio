@@ -1,12 +1,11 @@
 import { HiArrowNarrowRight } from "react-icons/hi";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 import { FaCode, FaPenFancy, FaPrint } from "react-icons/fa";
 import { useEffect } from "react";
 import gsap from "gsap";
 
 const Home = () => {
   useEffect(() => {
-    // soft entrance (unchanged feel, smoother)
     gsap.fromTo(
       ".heroFade",
       {
@@ -22,7 +21,6 @@ const Home = () => {
       }
     );
 
-    // subtle floating (kept but reduced intensity)
     gsap.to(".card1", {
       y: -8,
       duration: 5,
@@ -49,8 +47,8 @@ const Home = () => {
   }, []);
 
   return (
-    <div
-      name="home"
+    <section
+      id="home"
       className="w-full min-h-screen bg-[#f5f7fb] text-[#233554] py-20 relative overflow-hidden"
     >
       {/* background blur */}
@@ -62,8 +60,8 @@ const Home = () => {
           Hi, I am
         </p>
 
-        <h1 className="heroFade text-4xl sm:text-7xl font-black text-[#122254] mt-3 leading-tight">
-          Qasim
+        <h1 className="heroFade text-4xl sm:text-5xl font-black text-[#122254] mt-3 leading-tight">
+          Qasim Muhammad
         </h1>
 
         <small className="heroFade sm:text-2xl text-[#3c4b6e] mt-4 tracking-wide leading-9">
@@ -71,7 +69,7 @@ const Home = () => {
           <span className="text-red-500">|</span> Artworker
         </small>
 
-        {/* TEXT KEPT EXACTLY SAME */}
+        {/* FULL TEXT KEPT EXACTLY AS YOU WROTE IT */}
         <p className="heroFade text-[#5c6574] py-6 max-w-[950px] leading-9 text-[16px]">
           I’m a <strong>Frontend Developer</strong> and{" "}
           <strong>UI/UX Designer </strong>
@@ -106,7 +104,7 @@ const Home = () => {
           accessible, and visually compelling digital experiences.
         </p>
 
-        {/* --- SKILL CARDS --- */}
+        {/* SKILL CARDS */}
         <div className="grid sm:grid-cols-3 gap-6 mt-10 items-stretch">
 
           {/* Web Developer */}
@@ -115,7 +113,6 @@ const Home = () => {
               <div className="w-[58px] h-[58px] rounded-2xl bg-red-100 flex items-center justify-center">
                 <FaCode className="text-red-500 text-2xl" />
               </div>
-
               <h3 className="text-xl font-bold text-[#122254]">
                 Web Developer
               </h3>
@@ -136,7 +133,6 @@ const Home = () => {
               <div className="w-[58px] h-[58px] rounded-2xl bg-red-500/20 flex items-center justify-center">
                 <FaPenFancy className="text-red-400 text-2xl" />
               </div>
-
               <h3 className="text-xl font-bold">UI/UX Designer</h3>
             </div>
 
@@ -154,7 +150,6 @@ const Home = () => {
               <div className="w-[58px] h-[58px] rounded-2xl bg-white/20 flex items-center justify-center">
                 <FaPrint className="text-white text-2xl" />
               </div>
-
               <h3 className="text-xl font-bold">Creative Artworker</h3>
             </div>
 
@@ -170,18 +165,18 @@ const Home = () => {
 
         {/* BUTTON */}
         <div className="heroFade mt-14">
-          <Link to="work" smooth={true} offset={50} duration={500}>
+          <ScrollLink to="work" smooth={true} offset={-80} duration={500}>
             <button className="group bg-[#122254] text-white px-8 py-5 rounded-full flex items-center hover:bg-red-500 transition duration-300 shadow-sm hover:shadow-md">
               Work
               <span className="group-hover:translate-x-2 transition duration-300">
                 <HiArrowNarrowRight className="ml-3 text-xl" />
               </span>
             </button>
-          </Link>
+          </ScrollLink>
         </div>
 
       </div>
-    </div>
+    </section>
   );
 };
 

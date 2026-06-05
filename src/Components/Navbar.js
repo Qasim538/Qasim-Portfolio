@@ -1,193 +1,174 @@
 import React, { useState } from "react";
-import logo from "../Assets/Q-Logo.png";
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-import { Link } from "react-scroll";
+
+import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const isHome = location.pathname === "/";
+
   const handleClick = () => setNav(!nav);
 
   const openPDF = (e) => {
     e.preventDefault();
-    e.stopPropagation();
+
     const pdfUrl = `${process.env.PUBLIC_URL}/Qasim_Portfolio.pdf`;
+
     window.open(pdfUrl, "_blank", "noopener,noreferrer");
+  };
+
+  const goToSection = (section) => {
+    const scrollTo = () => {
+      const el = document.getElementById(section);
+
+      if (el) {
+        el.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    };
+
+    if (!isHome) {
+      navigate("/");
+
+      requestAnimationFrame(() => {
+        setTimeout(scrollTo, 100);
+      });
+    } else {
+      scrollTo();
+    }
+
+    setNav(false);
   };
 
   return (
     <>
       {/* NAVBAR */}
-      <div className="fixed w-full h-[80px] flex justify-between items-center px-5 md:px-20 bg-white/40   text-[#071325] z-50">
-        {/* Logo */}
-        <div>
-          <img src={logo} alt="Logo" style={{ width: "50px" }} />
-        </div>
+      <div className="fixed w-full h-[80px] flex justify-between items-center px-5 md:px-20 bg-white/40 backdrop-blur text-[#071325] z-50">
+        {/* LOGO */}
+        <RouterLink
+          to="/"
+          onClick={() => setNav(false)}
+          className="text-3xl font-black text-[#122254]"
+        >
+          Qasim<span className="text-red-500">.</span>
+        </RouterLink>
 
-        {/* Desktop Menu */}
+        {/* DESKTOP MENU */}
         <ul className="hidden md:flex gap-8 text-lg items-center">
           <li>
-            <Link
-              className="hover:text-red-500"
-              to="home"
-              smooth
-              offset={50}
-              duration={500}
-            >
+            <RouterLink to="/" className="hover:text-red-500">
               Home
-            </Link>
+            </RouterLink>
           </li>
-          <li>
-            <Link
-              className="hover:text-red-500"
-              to="skills"
-              smooth
-              offset={50}
-              duration={500}
-            >
-              Skills
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="hover:text-red-500"
-              to="work"
-              smooth
-              offset={50}
-              duration={500}
-            >
-              Work
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="hover:text-red-500"
-              to="contact"
-              smooth
-              offset={50}
-              duration={500}
-            >
-              Contact
-            </Link>
-          </li>
+
           <li>
             <button
-              type="button"
+              onClick={() => goToSection("skills")}
+              className="hover:text-red-500"
+            >
+              Skills
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => goToSection("work")}
+              className="hover:text-red-500"
+            >
+              Work
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => goToSection("contact")}
+              className="hover:text-red-500"
+            >
+              Contact
+            </button>
+          </li>
+
+          <li>
+            <button
               onClick={openPDF}
-              className="hover:text-white cursor-pointer bg-red-500 px-4 py-1.5 rounded text-sm"
+              className="bg-red-500 px-4 py-1.5 rounded text-sm text-white hover:bg-red-600"
             >
               CV & Print Portfolio
             </button>
           </li>
         </ul>
 
-        {/* --- MOBILE RIGHT SIDE: Socials + Hamburger --- */}
+        {/* MOBILE RIGHT */}
         <div className="flex items-center gap-4 md:hidden">
-          {/* Social Icons (Mobile) */}
-          <div className="flex gap-3">
-            <a
-              href="https://www.linkedin.com/in/qasim835"
-              target="_blank"
-              rel="noreferrer"
-              className="text-blue-500 hover:text-blue-400 transition"
-            >
-              <FaLinkedin size={22} />
-            </a>
-            <a
-              href="https://github.com/Qasim538"
-              target="_blank"
-              rel="noreferrer"
-              className="text-gray-300 hover:text-gray-100 transition"
-            >
-              <FaGithub size={22} />
-            </a>
-            <a
-              href="mailto:mq12113@gmail.com"
-              className="text-[#6fc2b0] hover:text-teal-300 transition"
-            >
-              <HiOutlineMail size={22} />
-            </a>
-          </div>
+          <a
+            href="https://www.linkedin.com/in/qasim835"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaLinkedin size={22} />
+          </a>
 
-          {/* Hamburger Icon */}
-          <div onClick={handleClick} className="z-50 cursor-pointer">
+          <a
+            href="https://github.com/Qasim538"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaGithub size={22} />
+          </a>
+
+          <a href="mailto:mq12113@gmail.com">
+            <HiOutlineMail size={22} />
+          </a>
+
+          <div onClick={handleClick} className="cursor-pointer z-50">
             {!nav ? <FaBars size={24} /> : <FaTimes size={24} />}
           </div>
         </div>
 
-        {/* Mobile Menu */}
-    {/* Mobile Menu */}
-<div
-  className={
-    !nav
-      ? "hidden"
-      : "absolute top-0 left-0 w-full h-screen bg-white flex flex-col justify-center items-center z-40"
-  }
->
-  {/* optional subtle background glow */}
-  <div className="absolute inset-0 bg-gradient-to-b from-slate-50 to-white"></div>
+        {/* MOBILE MENU */}
+        <div
+          className={
+            !nav
+              ? "hidden"
+              : "absolute top-0 left-0 w-full h-screen bg-white flex flex-col justify-center items-center z-40"
+          }
+        >
+          <ul className="text-center">
+            <li className="py-5 text-3xl font-semibold text-[#122254]">
+              <RouterLink to="/" onClick={handleClick}>
+                Home
+              </RouterLink>
+            </li>
 
-  <ul className="text-center relative z-10">
-    <li className="py-5 text-3xl font-semibold text-[#122254]">
-      <Link
-        onClick={handleClick}
-        to="home"
-        smooth
-        offset={50}
-        duration={500}
-        className="hover:text-red-500 transition"
-      >
-        Home
-      </Link>
-    </li>
+            <li className="py-5 text-3xl font-semibold text-[#122254]">
+              <button onClick={() => goToSection("skills")}>Skills</button>
+            </li>
 
-    <li className="py-5 text-3xl font-semibold text-[#122254]">
-      <Link
-        onClick={handleClick}
-        to="skills"
-        smooth
-        offset={50}
-        duration={500}
-        className="hover:text-red-500 transition"
-      >
-        Skills
-      </Link>
-    </li>
+            <li className="py-5 text-3xl font-semibold text-[#122254]">
+              <button onClick={() => goToSection("work")}>Work</button>
+            </li>
 
-    <li className="py-5 text-3xl font-semibold text-[#122254]">
-      <Link
-        onClick={handleClick}
-        to="work"
-        smooth
-        offset={50}
-        duration={500}
-        className="hover:text-red-500 transition"
-      >
-        Work
-      </Link>
-    </li>
+            <li className="py-5 text-3xl font-semibold text-[#122254]">
+              <button onClick={() => goToSection("contact")}>Contact</button>
+            </li>
+          </ul>
+        </div>
 
-    <li className="py-5 text-3xl font-semibold text-[#122254]">
-      <Link
-        onClick={handleClick}
-        to="contact"
-        smooth
-        offset={50}
-        duration={500}
-        className="hover:text-red-500 transition"
-      >
-        Contact
-      </Link>
-    </li>
-  </ul>
-</div>
-
-        {/* Social Icons (Desktop only - sidebar) */}
-        <div className="hidden lg:flex fixed flex-col top-[35%] left-0 z-[60]">
+        {/* SOCIAL SIDEBAR */}
+          
+            {/* Social Icons (Desktop only - sidebar) */}
+        <div className="hidden lg:flex fixed flex-col top-[250%] left-0 z-[60]">
           <ul>
-            <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600">
+            <li className="w-[160px] h-[60px] flex justify-between mb-1 items-center rounded-lg ml-[-100px] hover:ml-[-10px] duration-300 bg-red-100 ">
               <a
-                className="flex justify-between items-center w-full text-gray-300"
+                className="flex justify-between items-center w-full text-red-600"
                 href="https://www.linkedin.com/in/qasim835"
                 target="_blank"
                 rel="noreferrer"
@@ -196,9 +177,9 @@ const Navbar = () => {
               </a>
             </li>
 
-            <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]">
+            <li className="w-[160px] h-[60px] flex justify-between items-center mb-1  rounded-lg  ml-[-100px] hover:ml-[-10px] duration-300 bg-red-100 ">
               <a
-                className="flex justify-between items-center w-full text-gray-300"
+                className="flex justify-between items-center w-full text-red-600"
                 href="https://github.com/Qasim538"
                 target="_blank"
                 rel="noreferrer"
@@ -207,9 +188,9 @@ const Navbar = () => {
               </a>
             </li>
 
-            <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]">
+            <li className="w-[160px] h-[60px] flex justify-between items-center  rounded-lg  ml-[-100px] hover:ml-[-10px] duration-300 bg-red-100 ">
               <a
-                className="flex justify-between items-center w-full text-gray-300"
+                className="flex justify-between items-center w-full text-red-600"
                 href="mailto:mq12113@gmail.com"
               >
                 Email <HiOutlineMail size={30} />
@@ -218,23 +199,26 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
+          
 
-      {/* --- Floating CV Button (always visible, hidden when menu open) --- */}
+
+      {/* FLOATING CV BUTTON */}
       {!nav && (
         <div className="fixed right-0 top-[40%] z-[999]">
-          {/* Desktop version */}
           <button
             onClick={openPDF}
-            className="hidden md:block bg-red-700 text-white px-4 py-2 rounded-l-lg transform rotate-90 origin-bottom-right hover:bg-red-600 transition duration-300 shadow-lg"
-            style={{ writingMode: "vertical-rl", textOrientation: "upright" }}
+            className="hidden md:block bg-red-700 text-white px-4 py-2 rounded-l-lg transform rotate-90 origin-bottom-right hover:bg-red-600 transition"
+            style={{
+              writingMode: "vertical-rl",
+              textOrientation: "upright",
+            }}
           >
             CV & Print Portfolio
           </button>
 
-          {/* Mobile version */}
           <button
             onClick={openPDF}
-            className="md:hidden fixed bottom-20 right-3 bg-red-700 text-white px-3 py-2 rounded-lg shadow-lg hover:bg-red-600 transition duration-300 text-sm z-[999]"
+            className="md:hidden fixed bottom-20 right-3 bg-red-700 text-white px-3 py-2 rounded-lg shadow-lg text-sm"
           >
             CV & Portfolio
           </button>

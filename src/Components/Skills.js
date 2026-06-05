@@ -58,7 +58,7 @@ const Skills = () => {
 
   return (
     <section
-      name='skills'
+      id='skills'
       className='bg-[#f5f7fb] text-[#233554] py-20 relative overflow-hidden'
     >
       {/* Soft background glow */}
