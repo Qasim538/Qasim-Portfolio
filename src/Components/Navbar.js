@@ -155,6 +155,9 @@ const Navbar = () => {
           }
         >
           <ul className="text-center">
+            
+          <li className="py-5 text-3xl font-semibold text-[#122254]">
+
             <button
               onClick={() => {
                 if (!isHome) {
@@ -171,6 +174,8 @@ const Navbar = () => {
             >
               Home
             </button>
+
+            </li>
 
             <li className="py-5 text-3xl font-semibold text-[#122254]">
               <button onClick={() => goToSection("skills")}>Skills</button>
