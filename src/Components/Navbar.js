@@ -63,9 +63,23 @@ const Navbar = () => {
         {/* DESKTOP MENU */}
         <ul className="hidden md:flex gap-8 text-lg items-center">
           <li>
-            <RouterLink to="/" className="hover:text-red-500">
+            <button
+              onClick={() => {
+                if (!isHome) {
+                  navigate("/");
+                } else {
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                  });
+                }
+
+                setNav(false);
+              }}
+              className="hover:text-red-500"
+            >
               Home
-            </RouterLink>
+            </button>
           </li>
 
           <li>
@@ -141,11 +155,22 @@ const Navbar = () => {
           }
         >
           <ul className="text-center">
-            <li className="py-5 text-3xl font-semibold text-[#122254]">
-              <RouterLink to="/" onClick={handleClick}>
-                Home
-              </RouterLink>
-            </li>
+            <button
+              onClick={() => {
+                if (!isHome) {
+                  navigate("/");
+                } else {
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                  });
+                }
+
+                setNav(false);
+              }}
+            >
+              Home
+            </button>
 
             <li className="py-5 text-3xl font-semibold text-[#122254]">
               <button onClick={() => goToSection("skills")}>Skills</button>
@@ -162,8 +187,8 @@ const Navbar = () => {
         </div>
 
         {/* SOCIAL SIDEBAR */}
-          
-            {/* Social Icons (Desktop only - sidebar) */}
+
+        {/* Social Icons (Desktop only - sidebar) */}
         <div className="hidden lg:flex fixed flex-col top-[250%] left-0 z-[60]">
           <ul>
             <li className="w-[160px] h-[60px] flex justify-between mb-1 items-center rounded-lg ml-[-100px] hover:ml-[-10px] duration-300 bg-red-100 ">
@@ -199,8 +224,6 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-          
-
 
       {/* FLOATING CV BUTTON */}
       {!nav && (
