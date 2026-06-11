@@ -140,110 +140,141 @@ const Work = () => {
             Featured client and personal projects
           </p>
         </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  {projects.map((item, index) => (
+    <div
+      key={index}
+      className={`
+        workFade
+        group
+        relative
+        bg-white
+        rounded-2xl
+        overflow-hidden
+        border border-slate-200
+        shadow-md
+        hover:shadow-2xl
+        hover:-translate-y-2
+        transition-all duration-300
+        flex flex-col
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[280px] gap-4">
-          {projects.map((item, index) => (
-            <div
-              key={index}
-              className={`
-            workFade
-            group
-            relative
-            overflow-hidden
-            rounded-xl
-            bg-white
-            border border-slate-100
-            shadow-sm
-            hover:-translate-y-1
-            hover:shadow-lg
+        before:absolute
+        before:inset-0
+        before:bg-gradient-to-r
+        before:from-transparent
+        before:via-white/20
+        before:to-transparent
+        before:-translate-x-full
+        hover:before:translate-x-full
+        before:transition-transform
+        before:duration-1000
+        before:pointer-events-none
+
+        ${item.large ? "lg:col-span-2" : ""}
+        ${item.wide ? "lg:col-span-2" : ""}
+      `}
+    >
+      {/* IMAGE */}
+      <div className="relative overflow-hidden h-[220px]">
+        <img
+          src={item.img}
+          alt={item.title}
+          className="
+            w-full
+            h-full
+            object-cover
+            object-top
             transition-all
-            duration-300
+            duration-700
+            group-hover:scale-110
+            group-hover:-translate-y-2
+          "
+        />
 
-            ${item.large ? "lg:col-span-2 lg:row-span-1" : ""}
-            ${item.wide ? "lg:col-span-2 lg:row-span-1" : ""}
-            ${item.tall ? "lg:row-span-1" : ""}
-          `}
-            >
-              <div className="absolute inset-0 overflow-hidden">
+        <div
+          className="
+            absolute inset-0
+            bg-gradient-to-t
+            from-[#122254]/20
+            to-transparent
+            opacity-0
+            group-hover:opacity-100
+            transition duration-500
+          "
+        />
+      </div>
+
+      {/* CONTENT */}
+      <div className="flex flex-col flex-1 p-6">
+        {item.featured && (
+          <span className="mb-4 self-start bg-red-50 text-red-600 text-xs font-semibold px-3 py-1 rounded-full">
+            Featured
+          </span>
+        )}
+
+        <p className="text-xs uppercase tracking-[2px] text-slate-400 mb-2">
+          {item.category}
+        </p>
+
+        <h3 className="text-2xl font-black text-[#122254] mb-3 leading-tight transition duration-300 group-hover:text-red-600">
+          {item.title}
+        </h3>
+
+        <p className="text-[#5c6574] text-sm leading-relaxed mb-6">
+          {item.desc}
+        </p>
+
+        {/* TECH ICONS */}
+        <div className="flex gap-2 flex-wrap mb-6">
+          {item.software.map((tech, i) =>
+            techIcons[tech] ? (
+              <div
+                key={i}
+                className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center"
+              >
                 <img
-                  src={item.img}
-                  alt={item.title}
-                  className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-700"
+                  src={techIcons[tech]}
+                  alt={tech}
+                  className="w-5 h-5 object-contain"
                 />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-[#122254]/95 via-[#122254]/40 to-transparent"></div>
-
-                <div className="absolute inset-0 bg-[#122254]/20 opacity-0 group-hover:opacity-100 transition duration-300"></div>
               </div>
+            ) : null
+          )}
+        </div>
 
-              {item.featured && (
-                <div className="absolute top-4 left-4 z-20">
-                  <span className="bg-white text-[#122254] text-xs font-semibold px-3 py-1 rounded-full">
-                    Featured
-                  </span>
-                </div>
-              )}
-
-              <div className="relative z-10 flex flex-col h-full justify-end p-5">
-                <div>
-                  <p className="text-xs uppercase tracking-[2px] text-red-300 mb-2">
-                    {item.category}
-                  </p>
-
-                  <h3 className="text-xl lg:text-2xl font-black text-white mb-2 leading-tight">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-gray-200 text-sm mb-4">{item.desc}</p>
-
-                  <div className="flex gap-2 flex-wrap mb-5">
-                    {item.software.map((tech, i) =>
-                      techIcons[tech] ? (
-                        <div
-                          key={i}
-                          className="w-8 h-8 rounded-lg bg-white/15 backdrop-blur-sm flex items-center justify-center"
-                        >
-                          <img
-                            src={techIcons[tech]}
-                            alt={tech}
-                            className="w-4 h-4 object-contain"
-                          />
-                        </div>
-                      ) : null
-                    )}
-                  </div>
-                </div>
-
-                <Link
-                  to={item.link}
-                  className="
-    inline-flex
-    items-center
-    justify-center
-    self-start
-    px-4
-    py-2
-    rounded-full
-    border
-    border-white/50
-    text-white
-    text-sm
-    font-medium
-    backdrop-blur-sm
-    hover:bg-red-600
-    hover:text-white
-    hover:border-red-600
-    transition-all
-    duration-300
-  "
-                >
-                  View Case Study →
-                </Link>
-              </div>
-            </div>
-          ))}
+        {/* BUTTON */}
+        <div className="mt-auto">
+          <Link
+            to={item.link}
+            className="
+              inline-flex
+              items-center
+              gap-2
+              px-5
+              py-3
+              rounded-full
+              border-2
+              border-[#122254]
+              text-[#122254]
+              text-sm
+              font-medium
+              transition-all
+              duration-300
+              hover:bg-[#122254]
+              hover:text-white
+              hover:translate-x-1
+            "
+          >
+            View Case Study →
+          </Link>
         </div>
       </div>
+    </div>
+  ))}
+</div>
+</div>
+
+
     </section>
   );
 };

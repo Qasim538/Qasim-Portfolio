@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Qasim-Portfolio/static/css/main.9a23f727.css",
-    "main.js": "/Qasim-Portfolio/static/js/main.547d1d9d.js",
+    "main.css": "/Qasim-Portfolio/static/css/main.942d342b.css",
+    "main.js": "/Qasim-Portfolio/static/js/main.1e8d83bc.js",
     "static/media/Proj10.png": "/Qasim-Portfolio/static/media/Proj10.37f052ccd685e195b586.png",
     "static/media/Proj12.jpg": "/Qasim-Portfolio/static/media/Proj12.28ffcf12fc877a370bbb.jpg",
     "static/media/wordpress.png": "/Qasim-Portfolio/static/media/wordpress.61b97cbeccc312a891f5.png",
@@ -25,11 +25,11 @@
     "static/media/Sketch.svg": "/Qasim-Portfolio/static/media/Sketch.99f9ecb07dc0334ba2b7559c56753e82.svg",
     "index.html": "/Qasim-Portfolio/index.html",
     "static/media/framer copy.svg": "/Qasim-Portfolio/static/media/framer copy.1e7013357103f19c3e0c91aaaf122358.svg",
-    "main.9a23f727.css.map": "/Qasim-Portfolio/static/css/main.9a23f727.css.map",
-    "main.547d1d9d.js.map": "/Qasim-Portfolio/static/js/main.547d1d9d.js.map"
+    "main.942d342b.css.map": "/Qasim-Portfolio/static/css/main.942d342b.css.map",
+    "main.1e8d83bc.js.map": "/Qasim-Portfolio/static/js/main.1e8d83bc.js.map"
   },
   "entrypoints": [
-    "static/css/main.9a23f727.css",
-    "static/js/main.547d1d9d.js"
+    "static/css/main.942d342b.css",
+    "static/js/main.1e8d83bc.js"
   ]
 }
