@@ -17,20 +17,22 @@ import Framer from '../Assets/framer copy.svg'
 import Illustrator from '../Assets/Illustrator.png'
 import WordPress from '../Assets/wordpress.png'
 import Typescript from '../Assets/typescript.png'
+import webflow from '../Assets/webflow-icon.webp'
 
 const skillsData = [
   { name: 'HTML', img: html },
   { name: 'CSS', img: css },
-  { name: 'React', img: reactImg },
   { name: 'JavaScript', img: javascript },
+  { name: 'React', img: reactImg },
   { name: 'TypeScript', img: Typescript },
   { name: 'WordPress', img: WordPress },
   { name: 'Node.js', img: node },
   { name: 'Tailwind', img: tailwind },
   { name: 'Bootstrap', img: bootstrap },
+  { name: 'Sketch', img: Sketch },
   { name: 'Figma', img: Figma, height: true },
   { name: 'Framer', img: Framer, height: true },
-  { name: 'Sketch', img: Sketch },
+  { name: 'Webflow', img: webflow },
   { name: 'Photoshop', img: Photoshop },
   { name: 'InDesign', img: Indesign },
   { name: 'Illustrator', img: Illustrator },
