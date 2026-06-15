@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Qasim-Portfolio/static/css/main.4c687116.css",
-    "main.js": "/Qasim-Portfolio/static/js/main.2a750dd9.js",
+    "main.js": "/Qasim-Portfolio/static/js/main.f7d2573e.js",
     "static/media/Proj10.png": "/Qasim-Portfolio/static/media/Proj10.37f052ccd685e195b586.png",
     "static/media/Proj12.jpg": "/Qasim-Portfolio/static/media/Proj12.28ffcf12fc877a370bbb.jpg",
     "static/media/wordpress.png": "/Qasim-Portfolio/static/media/wordpress.61b97cbeccc312a891f5.png",
@@ -22,14 +22,15 @@
     "static/media/github.png": "/Qasim-Portfolio/static/media/github.1c4e66a47399b656b303.png",
     "static/media/Photoshop.png": "/Qasim-Portfolio/static/media/Photoshop.880f6d78873af158e512.png",
     "static/media/javascript.png": "/Qasim-Portfolio/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
+    "static/media/webflow-icon.webp": "/Qasim-Portfolio/static/media/webflow-icon.a9ae4b3c9f3871cf8912.webp",
     "static/media/Sketch.svg": "/Qasim-Portfolio/static/media/Sketch.99f9ecb07dc0334ba2b7559c56753e82.svg",
     "index.html": "/Qasim-Portfolio/index.html",
     "static/media/framer copy.svg": "/Qasim-Portfolio/static/media/framer copy.1e7013357103f19c3e0c91aaaf122358.svg",
     "main.4c687116.css.map": "/Qasim-Portfolio/static/css/main.4c687116.css.map",
-    "main.2a750dd9.js.map": "/Qasim-Portfolio/static/js/main.2a750dd9.js.map"
+    "main.f7d2573e.js.map": "/Qasim-Portfolio/static/js/main.f7d2573e.js.map"
   },
   "entrypoints": [
     "static/css/main.4c687116.css",
-    "static/js/main.2a750dd9.js"
+    "static/js/main.f7d2573e.js"
   ]
 }
