@@ -18,6 +18,9 @@ import Illustrator from '../Assets/Illustrator.png'
 import WordPress from '../Assets/wordpress.png'
 import Typescript from '../Assets/typescript.png'
 import webflow from '../Assets/webflow-icon.webp'
+import workiva from '../Assets/Workiva.svg'
+import gsapLogo from '../Assets/gsap.svg'
+import lottieLogo from '../Assets/lottie.svg'
 
 const skillsData = [
   { name: 'HTML', img: html },
@@ -29,6 +32,8 @@ const skillsData = [
   { name: 'Node.js', img: node },
   { name: 'Tailwind', img: tailwind },
   { name: 'Bootstrap', img: bootstrap },
+  { name: 'GSAP', img: gsapLogo, height: true },
+  { name: 'Lottie', img: lottieLogo, height: true },
   { name: 'Sketch', img: Sketch },
   { name: 'Figma', img: Figma, height: true },
   { name: 'Framer', img: Framer, height: true },
@@ -36,7 +41,9 @@ const skillsData = [
   { name: 'Photoshop', img: Photoshop },
   { name: 'InDesign', img: Indesign },
   { name: 'Illustrator', img: Illustrator },
+  { name: 'Workiva', img: workiva, wide: true },
   { name: 'GitHub', img: github },
+  
 ]
 
 const Skills = () => {
@@ -88,9 +95,13 @@ const Skills = () => {
             >
               <div className='flex items-center justify-center h-[70px]'>
                 <img
-                  className={`${
-                    skill.height ? 'h-14' : 'w-14'
-                  } object-contain`}
+                  className={`object-contain ${
+                    skill.wide
+                      ? 'w-25 h-10'
+                      : skill.height
+                      ? 'h-14'
+                      : 'w-14'
+                  }`}
                   src={skill.img}
                   alt={skill.name}
                 />
