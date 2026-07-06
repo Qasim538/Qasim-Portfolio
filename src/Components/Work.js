@@ -9,6 +9,7 @@ import proj10 from "../Assets/projects/Proj10.png";
 import proj11 from "../Assets/projects/Proj11.jpg";
 import proj12 from "../Assets/projects/Proj12.jpg";
 import tombolaThumb from "../Assets/projects/Tombola.jpg";
+import GoogleWatch from "../Assets/projects/Google-pixel-watch-4-web-banners.jpg"
 
 import html from "../Assets/html.png";
 import css from "../Assets/css.png";
@@ -33,7 +34,6 @@ const projects = [
     desc: "Designed in Figma, refined in Photoshop and developed into a responsive HTML email.",
     link: "/google-pixel",
     software: ["Figma", "Photoshop", "HTML", "CSS"],
-    featured: true,
     large: true,
   },
 
@@ -44,7 +44,6 @@ const projects = [
     desc: "Design, development and maintenance of responsive web pages supporting one of Africa's leading trade finance institutions.",
     link: "/afreximbank",
     software: ["HTML", "CSS", "JavaScript", "React"],
-    featured: true,
     tall: true,
   },
 
@@ -59,23 +58,23 @@ const projects = [
   },
 
   {
-    img: tombolaThumb,
-    title: "Tombola HTML5 Banner Campaign",
+    img: GoogleWatch,
+    title: "Google Pixel, HTML5 Banner Campaign",
     category: "Display Advertising",
     desc: "Six HTML5 banner executions built with JavaScript and GSAP animations.",
-    link: "/tombola-banners",
+    link: "/pixel-watch4",
     software: ["HTML", "CSS", "JavaScript"],
-    featured: true,
     wide: true,
   },
 
+
   {
-    img: proj10,
-    title: "Afreximbank Event Landing Page",
-    category: "Landing Page",
-    desc: "Responsive landing page designed and developed for Afreximbank campaigns and events.",
-    link: "/afreximbank",
-    software: ["Figma", "HTML", "CSS"],
+    img: tombolaThumb,
+    title: "Tombola HTML5 Banner Campaign",
+    category: "Display Advertising",
+    desc: "HTML5 banner executions built with JavaScript and GSAP animations.",
+    link: "/tombola-banners",
+    software: ["HTML", "CSS", "JavaScript"],
     wide: true,
   },
 
@@ -89,6 +88,9 @@ const projects = [
     tall: true,
   },
 
+
+
+
   {
     img: proj9,
     title: "Vauxhall Marketing Email",
@@ -98,6 +100,17 @@ const projects = [
     software: ["Figma", "HTML", "CSS"],
     tall: true,
   },
+
+  {
+    img: proj10,
+    title: "Afreximbank Event Landing Page",
+    category: "Landing Page",
+    desc: "Responsive landing page designed and developed for Afreximbank campaigns and events.",
+    link: "/afreximbank",
+    software: ["Figma", "HTML", "CSS"],
+    wide: true,
+  },
+
 ];
 
 const Work = () => {
@@ -135,10 +148,7 @@ const Work = () => {
             Selected projects spanning email development, front-end engineering,
             HTML5 advertising and digital design.
           </p>
-
-          <p className="mt-2 text-sm text-slate-400">
-            Featured client and personal projects
-          </p>
+    
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
   {projects.map((item, index) => (
@@ -174,35 +184,25 @@ const Work = () => {
         ${item.wide ? "lg:col-span-2" : ""}
       `}
     >
-      {/* IMAGE */}
-      <div className="relative overflow-hidden h-[220px]">
-        <img
-          src={item.img}
-          alt={item.title}
-          className="
-            w-full
-            h-full
-            object-cover
-            object-top
-            transition-all
-            duration-700
-            group-hover:scale-110
-            group-hover:-translate-y-2
-          "
-        />
-
-        <div
-          className="
-            absolute inset-0
-            bg-gradient-to-t
-            from-[#122254]/20
-            to-transparent
-            opacity-0
-            group-hover:opacity-100
-            transition duration-500
-          "
-        />
-      </div>
+{/* IMAGE */}
+<div className="relative h-[220px] bg-slate-100 p-4">
+  <div className="w-full h-full bg-white rounded-2xl p-2 shadow-sm">
+    <img
+      src={item.img}
+      alt={item.title}
+      className="
+        w-full
+        h-full
+        object-cover
+        object-top
+        rounded-xl
+        transition-all
+        duration-700
+        group-hover:scale-105
+      "
+    />
+  </div>
+</div>
 
       {/* CONTENT */}
       <div className="flex flex-col flex-1 p-6">

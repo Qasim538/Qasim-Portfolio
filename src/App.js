@@ -10,6 +10,7 @@ import GooglePixel from "./pages/GooglePixel";
 import CiscoEmail from "./pages/CiscoEmail";
 import VauxhallCampaign from "./pages/VauxhallCampaign";
 import Afreximbank from "./pages/Afreximbank";
+import GooglePixelWatch from "./pages/GooglePixel-watch";
 
 function MainPortfolio() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Route path="/" element={<MainPortfolio />} />
         <Route path="/tombola-banners" element={<TombolaBanners />} />
         <Route path="/google-pixel" element={<GooglePixel />} />
+        <Route path="/pixel-watch4" element={< GooglePixelWatch/>} />
         <Route path="/cisco-email" element={<CiscoEmail />} />
         <Route path="/vauxhall-campaign" element={<VauxhallCampaign />} />
       </Routes>
