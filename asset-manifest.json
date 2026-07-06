@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/Qasim-Portfolio/static/css/main.4c687116.css",
-    "main.js": "/Qasim-Portfolio/static/js/main.2b8b8595.js",
+    "main.css": "/Qasim-Portfolio/static/css/main.5e38d7d7.css",
+    "main.js": "/Qasim-Portfolio/static/js/main.83cd8c39.js",
     "static/media/Proj10.png": "/Qasim-Portfolio/static/media/Proj10.37f052ccd685e195b586.png",
-    "static/media/Proj12.jpg": "/Qasim-Portfolio/static/media/Proj12.28ffcf12fc877a370bbb.jpg",
     "static/media/wordpress.png": "/Qasim-Portfolio/static/media/wordpress.61b97cbeccc312a891f5.png",
     "static/media/Proj9.jpg": "/Qasim-Portfolio/static/media/Proj9.373290342394f06b0db0.jpg",
     "static/media/Bootstrap_logo.svg.png": "/Qasim-Portfolio/static/media/Bootstrap_logo.svg.ca2bd3b63ce84d5327d4.png",
     "static/media/Proj7.jpg": "/Qasim-Portfolio/static/media/Proj7.f5c5eafc7d730bffbc8b.jpg",
     "static/media/Proj8.jpg": "/Qasim-Portfolio/static/media/Proj8.0be96b0e3190fece2d04.jpg",
+    "static/media/Google-pixel-watch-4-web-banners.jpg": "/Qasim-Portfolio/static/media/Google-pixel-watch-4-web-banners.04d94a975cf8f0167814.jpg",
+    "static/media/Proj12.jpg": "/Qasim-Portfolio/static/media/Proj12.af412711f30eeb05bda8.jpg",
     "static/media/Tombola.jpg": "/Qasim-Portfolio/static/media/Tombola.eb9ed53a8d8c3643b47f.jpg",
     "static/media/Figma.png": "/Qasim-Portfolio/static/media/Figma.fd3542507786a9422092.png",
     "static/media/Proj11.jpg": "/Qasim-Portfolio/static/media/Proj11.723895850efd56b872fe.jpg",
@@ -29,11 +30,11 @@
     "static/media/Sketch.svg": "/Qasim-Portfolio/static/media/Sketch.99f9ecb07dc0334ba2b7559c56753e82.svg",
     "index.html": "/Qasim-Portfolio/index.html",
     "static/media/framer copy.svg": "/Qasim-Portfolio/static/media/framer copy.1e7013357103f19c3e0c91aaaf122358.svg",
-    "main.4c687116.css.map": "/Qasim-Portfolio/static/css/main.4c687116.css.map",
-    "main.2b8b8595.js.map": "/Qasim-Portfolio/static/js/main.2b8b8595.js.map"
+    "main.5e38d7d7.css.map": "/Qasim-Portfolio/static/css/main.5e38d7d7.css.map",
+    "main.83cd8c39.js.map": "/Qasim-Portfolio/static/js/main.83cd8c39.js.map"
   },
   "entrypoints": [
-    "static/css/main.4c687116.css",
-    "static/js/main.2b8b8595.js"
+    "static/css/main.5e38d7d7.css",
+    "static/js/main.83cd8c39.js"
   ]
 }
