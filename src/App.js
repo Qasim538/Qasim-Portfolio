@@ -11,6 +11,7 @@ import CiscoEmail from "./pages/CiscoEmail";
 import VauxhallCampaign from "./pages/VauxhallCampaign";
 import Afreximbank from "./pages/Afreximbank";
 import GooglePixelWatch from "./pages/GooglePixel-watch";
+import SompoBanners from "./pages/SompoBanners";
 
 function MainPortfolio() {
   return (
@@ -37,6 +38,7 @@ function App() {
         <Route path="/pixel-watch4" element={< GooglePixelWatch/>} />
         <Route path="/cisco-email" element={<CiscoEmail />} />
         <Route path="/vauxhall-campaign" element={<VauxhallCampaign />} />
+        <Route path="/sompo-banners" element={<SompoBanners />} />
       </Routes>
     </HashRouter>
   );

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="ad.size" content="width=970,height=250">
+<script type="text/javascript">
+var clickTag = "https://www.google.com";
+</script>
+<meta name="authoring-tool" content="Adobe_Animate_CC">
+<title>SOMPO_Economist_Billboard_970x250_Traffic</title>
+
+<script src="https://s0.2mdn.net/ads/studio/cached_libs/createjs_2019.11.15_min.js"></script>
+<script src="Sompo_Traffic_970x250_v1-1.js"></script>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+	canvas = document.getElementById("canvas");
+	anim_container = document.getElementById("animation_container");
+	dom_overlay_container = document.getElementById("dom_overlay_container");
+	var comp=AdobeAn.getComposition("340402B305AA4902929A84DBBE4AC4FA");
+	var lib=comp.getLibrary();
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+	var lib=comp.getLibrary();
+	loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt, comp) {
+	var images=comp.getImages();	
+	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+}
+function handleComplete(evt,comp) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	var queue = evt.target;
+	var ssMetadata = lib.ssMetadata;
+	for(i=0; i<ssMetadata.length; i++) {
+		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+	}
+	exportRoot = new lib.Sompo_Night_970x250_v11();
+	// Maximum 3 plays, then stop on final frame.
+	exportRoot.loop = false;
+	var sompoPlayCount = 0;
+	var sompoEndHandled = false;
+	exportRoot.addEventListener("tick", function () {
+		var lastFrame = exportRoot.totalFrames - 1;
+		if (exportRoot.currentFrame >= lastFrame) {
+			if (!sompoEndHandled) {
+				sompoEndHandled = true;
+				sompoPlayCount += 1;
+				if (sompoPlayCount >= 3) { exportRoot.gotoAndStop(lastFrame); }
+				else { setTimeout(function(){ exportRoot.gotoAndPlay(0); sompoEndHandled=false; },0); }
+			}
+		} else { sompoEndHandled = false; }
+	});
+
+	exportRoot.addEventListener("tick", AdobeAn.handleFilterCache);
+	stage = new lib.Stage(canvas);	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		stage.addChild(exportRoot);
+		createjs.Ticker.framerate = lib.properties.fps;
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	AdobeAn.makeResponsive(false,'both',false,1,[canvas,anim_container,dom_overlay_container]);	
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+
+function startSompoAfterPageLoad() {
+    // Heavy manifest assets are requested only after the host page/window load event.
+    // This makes the linked image a polite/subload asset instead of initial load.
+    window.setTimeout(init, 0);
+}
+window.addEventListener("load", startSompoAfterPageLoad);
+
+</script>
+
+<style>
+#animation_container { position:relative !important; overflow:hidden !important; }
+#click_area { position:absolute; left:0; top:0; width:970px; height:250px; z-index:9999; display:block; cursor:pointer; background:rgba(0,0,0,0); }
+
+#economist_border {
+  position:absolute;
+  left:0;
+  top:0;
+  width:970px;
+  height:250px;
+  box-sizing:border-box;
+  border:1px solid #000;
+  pointer-events:none;
+  z-index:9998;
+}
+</style>
+</head>
+<body style="margin:0px;">
+	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:970px; height:250px">
+		<canvas id="canvas" width="970" height="250" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:970px; height:250px; position: absolute; left: 0px; top: 0px; display: block;">
+		</div>
+<div id="economist_border" aria-hidden="true"></div>
+		<a id="click_area" href="javascript:void(window.open(clickTag, '_blank'));" aria-label="Open advertiser website"></a>
+	</div>
+</body>
+</html>

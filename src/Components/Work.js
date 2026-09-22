@@ -10,6 +10,7 @@ import proj11 from "../Assets/projects/Proj11.jpg";
 import proj12 from "../Assets/projects/Proj12.jpg";
 import tombolaThumb from "../Assets/projects/Tombola.jpg";
 import GoogleWatch from "../Assets/projects/Google-pixel-watch-4-web-banners.jpg"
+import SompoBanners from "../Assets/projects/Sompo-web-banners.jpg";
 
 import html from "../Assets/html.png";
 import css from "../Assets/css.png";
@@ -108,6 +109,15 @@ const projects = [
     desc: "Responsive landing page designed and developed for Afreximbank campaigns and events.",
     link: "/afreximbank",
     software: ["Figma", "HTML", "CSS"],
+    wide: true,
+  },
+  {
+    img: SompoBanners,
+    title: "Sompo International HTML5 Banner Campaign",
+    category: "Display Advertising",
+    desc: "HTML5 display campaign produced for Bloomberg and The Economist, delivering multiple responsive banner formats across international markets.",
+    link: "/sompo-banners",
+    software: ["HTML", "CSS", "JavaScript"],
     wide: true,
   },
 

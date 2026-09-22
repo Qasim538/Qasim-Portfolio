@@ -26,11 +26,11 @@ export default function GooglePixel() {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <span className="bg-white/10 px-4 py-2 rounded-full">
-                Email Design
+                Banners Design
               </span>
 
               <span className="bg-white/10 px-4 py-2 rounded-full">
-                HTML Email
+                HTML Banners
               </span>
 
               <span className="bg-white/10 px-4 py-2 rounded-full">
