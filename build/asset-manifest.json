@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Qasim-Portfolio/static/css/main.5e38d7d7.css",
-    "main.js": "/Qasim-Portfolio/static/js/main.83cd8c39.js",
+    "main.js": "/Qasim-Portfolio/static/js/main.07f37989.js",
     "static/media/Proj10.png": "/Qasim-Portfolio/static/media/Proj10.37f052ccd685e195b586.png",
     "static/media/wordpress.png": "/Qasim-Portfolio/static/media/wordpress.61b97cbeccc312a891f5.png",
     "static/media/Proj9.jpg": "/Qasim-Portfolio/static/media/Proj9.373290342394f06b0db0.jpg",
@@ -14,6 +14,7 @@
     "static/media/Figma.png": "/Qasim-Portfolio/static/media/Figma.fd3542507786a9422092.png",
     "static/media/Proj11.jpg": "/Qasim-Portfolio/static/media/Proj11.723895850efd56b872fe.jpg",
     "static/media/Illustrator.png": "/Qasim-Portfolio/static/media/Illustrator.cc77895294e2f7e568a1.png",
+    "static/media/Sompo-web-banners.jpg": "/Qasim-Portfolio/static/media/Sompo-web-banners.4cdd055e024363a47b18.jpg",
     "static/media/react.png": "/Qasim-Portfolio/static/media/react.0cf951a69d8e58f83f9d.png",
     "static/media/node.png": "/Qasim-Portfolio/static/media/node.952a9ea986dcfa5229ad.png",
     "static/media/Indesign.png": "/Qasim-Portfolio/static/media/Indesign.ec33e141ce5fa73512aa.png",
@@ -31,10 +32,10 @@
     "index.html": "/Qasim-Portfolio/index.html",
     "static/media/framer copy.svg": "/Qasim-Portfolio/static/media/framer copy.1e7013357103f19c3e0c91aaaf122358.svg",
     "main.5e38d7d7.css.map": "/Qasim-Portfolio/static/css/main.5e38d7d7.css.map",
-    "main.83cd8c39.js.map": "/Qasim-Portfolio/static/js/main.83cd8c39.js.map"
+    "main.07f37989.js.map": "/Qasim-Portfolio/static/js/main.07f37989.js.map"
   },
   "entrypoints": [
     "static/css/main.5e38d7d7.css",
-    "static/js/main.83cd8c39.js"
+    "static/js/main.07f37989.js"
   ]
 }
