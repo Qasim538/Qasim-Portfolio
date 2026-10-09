@@ -71,7 +71,7 @@ const Home = () => {
         {/* PROFILE */}
         <p className="heroFade text-[#5c6574] py-6 max-w-[950px] leading-9 text-[16px]">
           I’m a <strong>Senior Creative</strong> with{" "}
-          <strong>16+ years of industry experience</strong> working across
+          <strong>20+ years of industry experience</strong> working across
           global brands and fast-paced creative environments. I combine{" "}
           <strong>creative craftsmanship</strong>, technical knowledge and
           strong attention to detail to deliver thoughtful visual
